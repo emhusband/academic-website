@@ -1,0 +1,24 @@
+---
+title: "Teaching"
+---
+
+<div class="page-title">
+  <div class="section-kicker">Teaching</div>
+  <h1>Teaching & supervision</h1>
+  <p>Teaching in linguistics, psycholinguistics and cognitive science, with particular emphasis on questions about meaning, language comprehension and experimental reasoning.</p>
+</div>
+
+<section class="section">
+  <div class="section-copy">
+    <h2>Teaching interests</h2>
+    <p>My teaching centres on the relationship between linguistic structure and cognition. Topics that recur across teaching and supervision include semantics, sentence processing, psycholinguistics, experimental methods, inference, prediction and memory.</p>
+    <p>For prospective graduate students, the <a href="people.html">People</a> page gives the best overview of the kinds of projects that fit my research.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-copy">
+    <h2>Current materials</h2>
+    <p>Course-specific readings, problem sets and other teaching materials can be added here as needed. The site is intentionally designed so that this section can remain short and low-maintenance rather than becoming a second learning platform.</p>
+  </div>
+</section>
