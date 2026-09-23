@@ -14,13 +14,6 @@ I study the cognitive representations that underlie linguistic meaning: the form
 
 My work combines linguistic theory and experimental psycholinguistics because **theories of representation and theories of processing constrain one another**.
 
-<div class="hero-links" aria-label="Contact and research links">
-  <a href="mailto:matthew.husband@ling-phil.ox.ac.uk">Email</a>
-  <a href="https://scholar.google.com/citations?user=R-e8yNsAAAAJ">Google Scholar</a>
-  <a href="https://orcid.org/0000-0002-6446-5582">ORCID</a>
-  <a href="https://github.com/emhusband">GitHub</a>
-</div>
-
 <div class="hero-affiliation">Faculty of Linguistics, Philology and Phonetics · University of Oxford<br>Tutorial Fellow · St Hugh's College</div>
 
 :::
@@ -31,10 +24,11 @@ My work combines linguistic theory and experimental psycholinguistics because **
 <div class="profile-photo"><img src="images/profile-placeholder.svg" alt="E. Matthew Husband"></div>
 :::
 
-<div class="hero-side-links">
-  <a href="research/index.html">Research →</a>
-  <a href="publications.html">Publications →</a>
-  <a href="cv.html">CV →</a>
+<div class="hero-side-links" aria-label="Professional links">
+  <a href="mailto:matthew.husband@ling-phil.ox.ac.uk">Email</a>
+  <a href="https://scholar.google.com/citations?user=R-e8yNsAAAAJ">Google Scholar</a>
+  <a href="https://orcid.org/0000-0002-6446-5582">ORCID</a>
+  <a href="https://github.com/emhusband">GitHub</a>
 </div>
 
 :::
@@ -123,9 +117,7 @@ Evidence that comprehenders exploit probabilistic information to anticipate upco
 
 <section class="section prospective-home">
 
-::: {.split}
-
-::: {.section-copy}
+<div class="section-copy prospective-copy">
 <div class="section-kicker">Prospective researchers</div>
 
 ## DPhil students and postdocs
@@ -135,16 +127,7 @@ I am interested in working with researchers who want to investigate the cognitiv
 Projects might concern linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition. A strong fit need not reproduce my existing projects; what matters is a well-specified question for which linguistic theory and experimental evidence can usefully constrain one another.
 
 [Information about working with me →](people.html)
-:::
-
-::: {.researcher-card}
-<div class="smallcaps">Useful links</div>
-
-[CV](cv.html)  
-[Google Scholar](https://scholar.google.com/citations?user=R-e8yNsAAAAJ)  · [ORCID](https://orcid.org/0000-0002-6446-5582)  · [GitHub](https://github.com/emhusband)
-:::
-
-:::
+</div>
 
 </section>
 

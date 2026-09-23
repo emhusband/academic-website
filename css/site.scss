@@ -146,7 +146,7 @@ a:hover { color: $blue-dark; }
 .selected-item > p:last-of-type + p { font-size: .8rem; }
 
 .split { display: grid; grid-template-columns: 1.3fr .7fr; gap: 3rem; align-items: start; }
-.researcher-card { background: $soft-blue; border: 1px solid #dce7f1; padding: 1.55rem 1.65rem; }
+.prospective-copy { max-width: 78ch; }
 .smallcaps { text-transform: uppercase; letter-spacing: .13em; font-size: .71rem; font-weight: 600; color: $blue; margin-bottom: .45rem; }
 
 .footer-logos { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2rem 0 1rem; }
@@ -213,26 +213,42 @@ a:hover { color: $blue-dark; }
   .section-head { align-items: flex-start; flex-direction: column; }
 }
 
-/* --- v3 layout and animated research network --- */
+/* --- v4 layout and animated research network --- */
 .quarto-container,
-main.content,
 #quarto-content {
-  width: 100%;
-  max-width: 1240px !important;
+  width: 100% !important;
+  max-width: none !important;
 }
 
-main.content { padding-left: 2.2rem; padding-right: 2.2rem; }
+.page-columns {
+  display: block !important;
+}
+
+main.content {
+  width: min(1380px, calc(100vw - 4rem)) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .container-fluid {
+  width: min(1380px, calc(100vw - 4rem));
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .hero {
-  grid-template-columns: 1.18fr .82fr;
-  gap: 5.2rem;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 4.8rem;
   padding-top: 4.7rem;
   padding-bottom: 4.2rem;
 }
 
 .hero-copy h1 { max-width: 13em; }
 .hero-affiliation { margin-top: 1.55rem; color: $muted; font-size: .82rem; line-height: 1.55; }
-.hero-side-links { display: flex; gap: 1.15rem; flex-wrap: wrap; margin-top: .95rem; font-size: .85rem; }
+.hero-side-links { display: flex; gap: .9rem 1.2rem; flex-wrap: wrap; margin-top: .9rem; font-size: .84rem; }
 .hero-side-links a { text-decoration: none; }
 
 .research-glance { padding-bottom: 3.2rem; }
@@ -309,7 +325,8 @@ main.content { padding-left: 2.2rem; padding-right: 2.2rem; }
 .network-note { margin: .8rem auto 0; max-width: 60rem; text-align: center; color: $muted; font-size: .78rem; letter-spacing: .015em; }
 
 @media (max-width: 900px) {
-  main.content { padding-left: 1.25rem; padding-right: 1.25rem; }
+  main.content { width: min(100% - 2.5rem, 1380px) !important; }
+  .navbar .container-fluid { width: calc(100% - 2.5rem); }
   .hero { gap: 2.2rem; }
   #research-network-svg { min-width: 900px; min-height: 420px; }
   .network-wrap { overflow-x: auto; }
