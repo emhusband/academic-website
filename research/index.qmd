@@ -3,58 +3,92 @@ title: "Research"
 ---
 
 <div class="page-title">
-  <div class="section-kicker">Research programme</div>
-  <h1>Meaning as a cognitive representation</h1>
-  <p>I study how meaningful representations are structured, constructed and used during language comprehension. Linguistic theory and experimental psycholinguistics are complementary parts of the same project: theories of representation generate predictions about processing, while evidence about processing constrains theories of representation.</p>
+<div class="section-kicker">Research programme</div>
+
+# Meaning as a cognitive representation
+
+I study the cognitive representations that underlie linguistic meaning: what format those representations take, how they are constructed from linguistic input and context, how they are accessed and used in inference, and how they are retained in memory.
+
+Linguistic theory and experimental psycholinguistics are complementary parts of the same project. Theories of representation generate predictions about processing, while evidence about processing constrains theories of representation.
 </div>
 
-<section class="section">
-  <div class="section-kicker">Explore the programme</div>
-  <h2>Four ways into the research</h2>
-  <div class="filter-bar" id="research-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="representation">Representation</button>
-    <button class="filter-btn" data-filter="construction">Construction</button>
-    <button class="filter-btn" data-filter="inference">Inference & expectation</button>
-    <button class="filter-btn" data-filter="memory">Memory & knowledge</button>
-    <button class="filter-btn" data-filter="discourse">Discourse</button>
-  </div>
+<section class="section" id="explore">
+<div class="section-kicker">Explore the programme</div>
 
-  <div class="theme-block research-card" id="representation" data-tags="representation construction">
-    <div class="theme-label">01 · Representation</div>
-    <h3>What is the format and structure of meaning?</h3>
-    <p>I use linguistic analyses of compositional structure, event representation, generics, kinds, thematic relations and lexical meaning to ask what kinds of representations language requires and what their consequences are for cognition.</p>
-  </div>
+## Four ways into the research
 
-  <div class="theme-block research-card" id="construction" data-tags="construction representation inference">
-    <div class="theme-label">02 · Construction</div>
-    <h3>How are meaningful representations built?</h3>
-    <p>Sentence interpretation is incremental. This work asks how linguistic structure, lexical information, semantic enrichment and context are combined as an interpretation develops over time.</p>
-  </div>
+<p class="section-intro">These are entry points into the portfolio rather than independent research programmes. Work can belong to several categories at once.</p>
 
-  <div class="theme-block research-card" id="inference" data-tags="inference discourse construction">
-    <div class="theme-label">03 · Inference & expectation</div>
-    <h3>How does the comprehender go beyond what is explicitly given?</h3>
-    <p>This includes probabilistic prediction, structural expectation, focus alternatives, scalar implicature, contextual enrichment and discourse expectations: mechanisms through which prior information shapes what a comprehender anticipates and infers.</p>
-  </div>
+<div id="research-filter-controls" class="filter-bar" aria-label="Filter research themes"></div>
 
-  <div class="theme-block research-card" id="memory" data-tags="memory representation inference">
-    <div class="theme-label">04 · Memory & knowledge</div>
-    <h3>How do prior representations constrain interpretation?</h3>
-    <p>Comprehension depends on retrieval from memory and on knowledge acquired before and during an interaction. This work asks how memory mechanisms participate in interpretation and what representations persist after comprehension.</p>
-  </div>
+::: {.research-theme #representation data-tags="representation construction"}
 
-  <div class="theme-block research-card" id="discourse" data-tags="discourse inference memory construction">
-    <div class="theme-label">05 · Discourse</div>
-    <h3>How do interpretations develop across discourse?</h3>
-    <p>Recent work examines causal coherence, question-under-discussion structure, topic status and the maintenance of alternatives. Discourse provides a setting in which representation, inference, expectation and memory interact particularly clearly.</p>
-  </div>
+<div class="theme-label">01 · Representation</div>
+
+### What is the format and structure of meaning?
+
+I use linguistic analyses of compositional structure, event representation, generics, kinds, thematic relations and lexical meaning to ask what kinds of representations language requires and what their consequences are for cognition.
+
+**Keywords:** semantic representation · event structure · thematic relations · generics · lexical meaning
+
+:::
+
+::: {.research-theme #construction data-tags="construction representation inference"}
+
+<div class="theme-label">02 · Construction</div>
+
+### How are meaningful representations built?
+
+Sentence interpretation is incremental. This work asks how linguistic structure, lexical information, semantic enrichment and context are combined as an interpretation develops over time.
+
+**Keywords:** composition · enrichment · incremental interpretation · sentence processing
+
+:::
+
+::: {.research-theme #inference data-tags="inference construction discourse"}
+
+<div class="theme-label">03 · Inference & expectation</div>
+
+### How does the comprehender go beyond what is explicitly given?
+
+This includes probabilistic prediction, structural expectation, focus alternatives, scalar implicature, contextual enrichment and discourse expectations: mechanisms through which prior information shapes what a comprehender anticipates and infers.
+
+**Keywords:** prediction · expectation · alternatives · implicature · discourse inference
+
+:::
+
+::: {.research-theme #memory data-tags="memory representation inference"}
+
+<div class="theme-label">04 · Memory & knowledge</div>
+
+### How do prior representations constrain interpretation?
+
+Comprehension depends on retrieval from memory and on knowledge acquired before and during an interaction. This work asks how memory mechanisms participate in interpretation and what representations persist after comprehension.
+
+**Keywords:** memory · prior knowledge · retrieval · persistence · representation
+
+:::
+
+::: {.research-theme #discourse data-tags="discourse inference memory construction"}
+
+<div class="theme-label">05 · Discourse</div>
+
+### How do interpretations develop across discourse?
+
+Recent work examines causal coherence, question-under-discussion structure, topic status and the maintenance of alternatives. Discourse provides a setting in which representation, inference, expectation and memory interact particularly clearly.
+
+**Keywords:** discourse structure · QUD · coherence · topic · alternatives
+
+:::
+
 </section>
 
 <section class="section">
-  <div class="section-kicker">Methods</div>
-  <h2>Languages are a way to study cognition.</h2>
-  <p class="section-copy">I combine linguistic theory with experimental psycholinguistics. Depending on the question, methods have included acceptability judgments, eye tracking, maze tasks, electrophysiology and functional neuroimaging. The method is chosen to adjudicate between hypotheses about representation and processing rather than to define the research programme.</p>
+<div class="section-kicker">Methods</div>
+
+## Methods follow the question.
+
+I combine linguistic theory with experimental psycholinguistics. Depending on the question, methods have included acceptability judgments, eye tracking, maze tasks, electrophysiology and functional neuroimaging. The method is chosen to adjudicate between hypotheses about representation and processing rather than to define the research programme.
 </section>
 
 <script src="../js/research-filters.js"></script>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 940" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photograph placeholder</title>
+  <desc id="desc">Placeholder for a profile photograph of E. Matthew Husband.</desc>
+  <rect width="800" height="940" fill="#f4f6f8"/>
+  <rect x="1" y="1" width="798" height="938" fill="none" stroke="#dce2e8"/>
+  <circle cx="400" cy="350" r="125" fill="#dbe2e8"/>
+  <path d="M205 760c26-125 100-202 195-202s169 77 195 202" fill="#dbe2e8"/>
+  <text x="400" y="875" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#73808d">E. Matthew Husband</text>
+</svg>

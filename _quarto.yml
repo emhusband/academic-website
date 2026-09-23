@@ -4,8 +4,8 @@ project:
 
 website:
   title: "E. Matthew Husband"
-  description: "E. Matthew Husband — Professor of Psycholinguistics at the University of Oxford. Research on meaning, cognitive representation, language comprehension, inference, prediction, and memory."
-  site-url: https://USERNAME.github.io/em-husband/
+  description: "E. Matthew Husband — Professor of Psycholinguistics at the University of Oxford. Research on meaning, cognitive representation, language comprehension, inference, prediction, memory and knowledge."
+  site-url: https://emhusband.github.io/academic-website/
   navbar:
     title: "E. Matthew Husband"
     left:
@@ -26,15 +26,17 @@ website:
     right:
       - text: "University of Oxford"
       - text: "St Hugh's College"
-  reader-mode: false
-  search: false
-  open-graph: true
-  twitter-card: true
 
 format:
   html:
     theme: [default, css/site.scss]
+    title-block-style: none
     toc: false
     smooth-scroll: true
     link-external-newwindow: true
     html-math-method: katex
+
+resources:
+  - images/**
+  - files/**
+  - js/**

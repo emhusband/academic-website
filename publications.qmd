@@ -3,50 +3,121 @@ title: "Publications"
 ---
 
 <div class="page-title">
-  <div class="section-kicker">Publications</div>
-  <h1>Research output</h1>
-  <p>A working bibliography, with selected papers highlighted for their contribution to the broader programme on meaning, representation and cognition.</p>
+<div class="section-kicker">Publications</div>
+
+# Research output
+
+A working bibliography, with selected papers highlighted for their contribution to the broader programme on meaning, representation and cognition.
 </div>
 
 <section class="section">
-  <div class="filter-bar" id="pub-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="representation">Representation</button>
-    <button class="filter-btn" data-filter="construction">Construction</button>
-    <button class="filter-btn" data-filter="inference">Inference & expectation</button>
-    <button class="filter-btn" data-filter="memory">Memory & knowledge</button>
-    <button class="filter-btn" data-filter="discourse">Discourse</button>
-  </div>
+<div id="pub-filter-controls" class="filter-bar" aria-label="Filter publications"></div>
 
-  <div class="pub-list" id="pub-list">
-    <article class="pub" data-tags="discourse inference construction"><div class="pub-title">Yao, R., Altshuler, D. & Husband, E. M. (2026). An incremental QUD approach to causal discourse expectations.</div><div class="pub-meta"><em>Acta Psychologica</em>, 270, 107670.</div><div class="pub-note">Causal discourse expectations and question-under-discussion structure during incremental interpretation.</div><div class="pub-links"><a href="https://doi.org/10.1016/j.actpsy.2026.107670">DOI</a></div></article>
-    <article class="pub" data-tags="inference representation"><div class="pub-title">Zhang, Y. & Husband, E. M. (2026). Relating word prediction and probability judgment: Online and offline probabilistic processes are partially shared.</div><div class="pub-meta"><em>Proceedings of the Cognitive Science Society</em>, 48, 2798–2805.</div><div class="pub-links"><a href="https://escholarship.org/uc/item/113553v6">Paper</a></div></article>
-    <article class="pub" data-tags="discourse inference memory"><div class="pub-title">Yao, R., Altshuler, D. & Husband, E. M. (2026). Discourse expectations are sensitive to the right frontier constraint.</div><div class="pub-meta"><em>Discourse Processes</em>, 1–13.</div><div class="pub-links"><a href="https://doi.org/10.1080/0163853X.2026.2658004">DOI</a></div></article>
-    <article class="pub" data-tags="memory knowledge construction inference"><div class="pub-title">Palleschi, D., Husband, E. M. & Knoeferle, P. (2026). Prior and new knowledge in language comprehension: Referent lifetime status versus biographical accomplishments.</div><div class="pub-meta"><em>Acta Psychologica</em>, 265, 106579.</div><div class="pub-note">How prior and newly acquired information interact during comprehension.</div><div class="pub-links"><a href="https://doi.org/10.1016/j.actpsy.2026.106579">DOI</a></div></article>
-    <article class="pub" data-tags="memory inference representation"><div class="pub-title">Patson, N. & Husband, E. M. (2026). The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory.</div><div class="pub-meta"><em>Memory & Cognition</em>, 54, 2082–2112.</div><div class="pub-note">Evidence that implicit alternatives can be incorporated into longer-lasting representations during comprehension.</div><div class="pub-links"><a href="https://doi.org/10.3758/s13421-026-01856-8">DOI</a></div></article>
-    <article class="pub" data-tags="inference discourse memory"><div class="pub-title">Husband, E. M. & Patson, N. (2025). Informational sources and discourse in the generation and maintenance of alternatives.</div><div class="pub-meta">In Gotzner, N., Harris, J., Breheny, R. & Sharvit, Y. (eds.), <em>Alternatives — Theoretical and Empirical Perspectives</em>. Palgrave Studies in Pragmatics, Language and Cognition.</div><div class="pub-links"><a href="https://link.springer.com/book/9783031766756">Book</a></div></article>
-    <article class="pub" data-tags="discourse inference construction"><div class="pub-title">Yao, R., Husband, E. M. & Altshuler, D. (2024). Topichood and temporal interpretation of DPs guide clause-internal, causal coherence.</div><div class="pub-meta"><em>Proceedings of Sinn Und Bedeutung</em>, 28, 1034–1048.</div><div class="pub-links"><a href="https://doi.org/10.18148/sub/2024.v28.1177">DOI</a></div></article>
-    <article class="pub" data-tags="representation construction inference"><div class="pub-title">Husband, E. M. (2023). Thematic separation in light of sentence comprehension.</div><div class="pub-meta"><em>Language and Linguistics Compass</em>, 17(4), e12496.</div><div class="pub-note">Consequences of a theory of thematic relations for psycholinguistic modelling.</div><div class="pub-links"><a href="https://doi.org/10.1111/lnc3.12496">DOI</a></div></article>
-    <article class="pub" data-tags="inference construction"><div class="pub-title">Husband, E. M. (2022). Prediction in the maze: Evidence for probabilistic pre-activation from the English a/an contrast.</div><div class="pub-meta"><em>Glossa Psycholinguistics</em>, 1(1).</div><div class="pub-links"><a href="https://doi.org/10.5070/G601153">DOI</a></div></article>
-    <article class="pub" data-tags="inference construction representation"><div class="pub-title">Bovolenta, G. & Husband, E. M. (2022). Structural prediction during language comprehension revealed by electrophysiology: Evidence from Italian auxiliaries.</div><div class="pub-meta"><em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em>, 49(1), 116–129.</div><div class="pub-links"><a href="https://psycnet.apa.org/doi/10.1037/xlm0001115">Paper</a></div></article>
-    <article class="pub" data-tags="representation construction inference"><div class="pub-title">Ito, A. & Husband, E. M. (2022). Investigating shared and distinct mechanisms in semantic and syntactic enrichment: A priming study.</div><div class="pub-meta"><em>Language, Cognition, and Neuroscience</em>, 37(8), 1062–1072.</div><div class="pub-links"><a href="https://doi.org/10.1080/23273798.2022.2036781">DOI</a></div></article>
-    <article class="pub" data-tags="representation construction"><div class="pub-title">Husband, E. M. (2022). The syntax of generics and the absence of generic articles.</div><div class="pub-meta"><em>Proceedings of the Linguistic Society of America</em>, 7(1), 5213.</div><div class="pub-links"><a href="https://doi.org/10.3765/plsa.v7i1.5213">DOI</a></div></article>
-    <article class="pub" data-tags="representation construction"><div class="pub-title">Husband, E. M. (2012). <em>On the Compositional Nature of States</em>.</div><div class="pub-meta">Linguistik Aktuell/Linguistics Today 188. John Benjamins.</div><div class="pub-note">A theoretical account of stative interpretation grounded in compositional structure.</div><div class="pub-links"><a href="https://doi.org/10.1075/la.188">DOI</a></div></article>
-    <article class="pub" data-tags="representation construction"><div class="pub-title">Husband, E. M. (2018). Speaking of death.</div><div class="pub-meta"><em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>, 373(1754), 20180172.</div><div class="pub-note">What language reveals about representations of events, states and absence.</div><div class="pub-links"><a href="https://doi.org/10.1098/rstb.2018.0172">DOI</a></div></article>
-  </div>
+::: {.pub-list #pub-list}
+
+::: {.pub data-tags="discourse inference construction"}
+**Yao, R., Altshuler, D. & Husband, E. M. (2026).** An incremental QUD approach to causal discourse expectations.  
+*Acta Psychologica*, 270, 107670.  
+Causal discourse expectations and question-under-discussion structure during incremental interpretation.
+
+[DOI](https://doi.org/10.1016/j.actpsy.2026.107670)
+:::
+
+::: {.pub data-tags="inference representation"}
+**Zhang, Y. & Husband, E. M. (2026).** Relating word prediction and probability judgment: Online and offline probabilistic processes are partially shared.  
+*Proceedings of the Cognitive Science Society*, 48, 2798–2805.
+
+[Paper](https://escholarship.org/uc/item/113553v6)
+:::
+
+::: {.pub data-tags="discourse inference memory"}
+**Yao, R., Altshuler, D. & Husband, E. M. (2026).** Discourse expectations are sensitive to the right frontier constraint.  
+*Discourse Processes*, 1–13.
+
+[DOI](https://doi.org/10.1080/0163853X.2026.2658004)
+:::
+
+::: {.pub data-tags="memory knowledge construction inference"}
+**Palleschi, D., Husband, E. M. & Knoeferle, P. (2026).** Prior and new knowledge in language comprehension: Referent lifetime status versus biographical accomplishments.  
+*Acta Psychologica*, 265, 106579.  
+How prior and newly acquired information interact during comprehension.
+
+[DOI](https://doi.org/10.1016/j.actpsy.2026.106579)
+:::
+
+::: {.pub data-tags="memory inference representation"}
+**Patson, N. & Husband, E. M. (2026).** The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory.  
+*Memory & Cognition*, 54, 2082–2112.  
+Evidence that implicit alternatives can be incorporated into longer-lasting representations during comprehension.
+
+[DOI](https://doi.org/10.3758/s13421-026-01856-8)
+:::
+
+::: {.pub data-tags="inference discourse memory"}
+**Husband, E. M. & Patson, N. (2025).** Informational sources and discourse in the generation and maintenance of alternatives.  
+In Gotzner, N., Harris, J., Breheny, R. & Sharvit, Y. (eds.), *Alternatives — Theoretical and Empirical Perspectives*. Palgrave Studies in Pragmatics, Language and Cognition.
+
+[Book](https://link.springer.com/book/9783031766756)
+:::
+
+::: {.pub data-tags="discourse inference construction"}
+**Yao, R., Husband, E. M. & Altshuler, D. (2024).** Topichood and temporal interpretation of DPs guide clause-internal, causal coherence.  
+*Proceedings of Sinn und Bedeutung*, 28, 1034–1048.
+
+[DOI](https://doi.org/10.18148/sub/2024.v28.1177)
+:::
+
+::: {.pub data-tags="representation construction inference"}
+**Husband, E. M. (2023).** Thematic separation in light of sentence comprehension.  
+*Language and Linguistics Compass*, 17(4), e12496.  
+Consequences of a theory of thematic relations for psycholinguistic modelling.
+
+[DOI](https://doi.org/10.1111/lnc3.12496)
+:::
+
+::: {.pub data-tags="inference construction"}
+**Husband, E. M. (2022).** Prediction in the maze: Evidence for probabilistic pre-activation from the English a/an contrast.  
+*Glossa Psycholinguistics*, 1(1).
+
+[DOI](https://doi.org/10.5070/G601153)
+:::
+
+::: {.pub data-tags="inference construction representation"}
+**Bovolenta, G. & Husband, E. M. (2022).** Structural prediction during language comprehension revealed by electrophysiology: Evidence from Italian auxiliaries.  
+*Journal of Experimental Psychology: Learning, Memory, and Cognition*, 49(1), 116–129.
+
+[Paper](https://psycnet.apa.org/doi/10.1037/xlm0001115)
+:::
+
+::: {.pub data-tags="representation construction inference"}
+**Ito, A. & Husband, E. M. (2022).** Investigating shared and distinct mechanisms in semantic and syntactic enrichment: A priming study.  
+*Language, Cognition, and Neuroscience*, 37(8), 1062–1072.
+
+[DOI](https://doi.org/10.1080/23273798.2022.2036781)
+:::
+
+::: {.pub data-tags="representation construction"}
+**Husband, E. M. (2022).** The syntax of generics and the absence of generic articles.  
+*Proceedings of the Linguistic Society of America*, 7(1), 5213.
+
+[DOI](https://doi.org/10.3765/plsa.v7i1.5213)
+:::
+
+::: {.pub data-tags="representation construction"}
+**Husband, E. M. (2012).** *On the Compositional Nature of States*. Linguistik Aktuell/Linguistics Today 188. John Benjamins.
+
+[DOI](https://doi.org/10.1075/la.188)
+:::
+
+::: {.pub data-tags="representation construction"}
+**Husband, E. M. (2018).** Speaking of death.  
+*Philosophical Transactions of the Royal Society B: Biological Sciences*, 373(1754), 20180172.  
+What language reveals about representations of events, states and absence.
+
+[DOI](https://doi.org/10.1098/rstb.2018.0172)
+:::
+
+:::
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('#pub-filters .filter-btn');
-  const pubs = document.querySelectorAll('#pub-list .pub');
-  buttons.forEach(btn => btn.addEventListener('click', () => {
-    const filter = btn.dataset.filter;
-    buttons.forEach(b => b.classList.toggle('active', b === btn));
-    pubs.forEach(pub => {
-      const tags = (pub.dataset.tags || '').split(/\s+/);
-      pub.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
-    });
-  }));
-});
-</script>
+<script src="js/research-filters.js"></script>

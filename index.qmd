@@ -1,101 +1,215 @@
 ---
-title: "E. Matthew Husband"
-format: html
+title: ""
 ---
 
-<div class="masthead">
-  <div>
-    <div class="eyebrow">Professor of Psycholinguistics · University of Oxford</div>
-    <h1>Understanding meaning in the mind</h1>
-    <p class="lede">I study the cognitive representations that underlie linguistic meaning: how they are structured, constructed from linguistic input and context, accessed in memory, and used in inference.</p>
-    <p class="lede" style="font-size:1.05rem; margin-top:.85rem;">My work combines linguistic theory and experimental psycholinguistics because theories of representation and theories of processing constrain one another.</p>
-    <div class="cta-row">
-      <a class="btn-min primary" href="research/index.html">Explore research <span>→</span></a>
-      <a class="btn-min" href="publications.html">View publications <span>→</span></a>
-    </div>
-  </div>
-  <div class="profile-frame">
-    <div class="profile-photo" aria-label="Profile photo placeholder"><div class="initials">EMH</div></div>
-    <div class="caption">Profile photograph placeholder — replace <code>images/profile.jpg</code> with your preferred photo.</div>
-    <div class="contact-mini">
-      <div><a href="mailto:matthew.husband@ling-phil.ox.ac.uk">matthew.husband@ling-phil.ox.ac.uk</a></div>
-      <div>Faculty of Linguistics, Philology and Phonetics · University of Oxford</div>
-      <div>Tutorial Fellow · St Hugh's College</div>
-    </div>
-  </div>
+<section class="hero">
+
+::: {.hero-copy}
+
+<div class="eyebrow">Professor of Psycholinguistics · University of Oxford</div>
+
+# Meaning as a cognitive representation
+
+I study the cognitive representations that underlie linguistic meaning: the format they take, how they are constructed from linguistic input and context, how they are accessed and used in inference, and how they are retained in memory.
+
+My work combines linguistic theory and experimental psycholinguistics because **theories of representation and theories of processing constrain one another**.
+
+::: {.hero-links}
+[Research →](research/index.html)  
+[Publications →](publications.html)
+:::
+
+:::
+
+::: {.hero-side}
+
+::: {.profile-frame}
+
+::: {.profile-photo}
+<img src="images/profile-placeholder.svg" alt="E. Matthew Husband">
+:::
+
+:::
+
+::: {.contact-block}
+<div class="contact-label">Contact</div>
+
+<a href="mailto:matthew.husband@ling-phil.ox.ac.uk">matthew.husband@ling-phil.ox.ac.uk</a>  
+[Google Scholar](https://scholar.google.com/citations?user=R-e8yNsAAAAJ)  ·  [ORCID](https://orcid.org/0000-0002-6446-5582)  ·  [GitHub](https://github.com/emhusband)
+
+Faculty of Linguistics, Philology and Phonetics  
+University of Oxford  
+Tutorial Fellow · St Hugh's College
+:::
+
+:::
+
+</section>
+
+<section class="section research-glance">
+
+::: {.section-head}
+
+::: {layout-ncol=1}
+
+<div class="section-kicker">Research at a glance</div>
+
+## Meaning is represented, constructed, inferred and remembered.
+
+I use linguistic theory to formulate precise hypotheses about meaningful representations, and experimental psycholinguistics to investigate how those representations are built and used. The aim is not to separate theory from processing, but to use each to constrain the other.
+
+:::
+
+[Explore the research →](research/index.html)
+:::
+
+<div class="concept-map">
+
+::: {.concept concept-featured}
+<div class="concept-num">01</div>
+
+### Representation
+
+What is the **format and structure** of the representations that underlie linguistic meaning?
+
+[Explore representation →](research/index.html?topic=representation#explore)
+:::
+
+::: {.concept concept-featured}
+<div class="concept-num">02</div>
+
+### Construction & inference
+
+How are meaningful representations **constructed, enriched and updated** as linguistic input unfolds?
+
+[Explore construction & inference →](research/index.html?topic=construction#explore)
+:::
+
+::: {.concept concept-featured}
+<div class="concept-num">03</div>
+
+### Memory & knowledge
+
+How do **prior knowledge and memory** constrain interpretation, and what representations persist afterwards?
+
+[Explore memory & knowledge →](research/index.html?topic=memory#explore)
+:::
+
 </div>
 
-<section class="section">
-  <div class="section-head">
-    <div>
-      <div class="section-kicker">Research at a glance</div>
-      <h2>Meaning is represented, constructed, inferred and remembered.</h2>
-    </div>
-    <a href="research/index.html">Explore the research →</a>
-  </div>
-  <p class="research-intro">I use linguistic theory to formulate precise hypotheses about meaning and experimental psycholinguistics to investigate how those representations are built and used in real time. The same evidence can, in turn, inform the linguistic theory.</p>
-
-  <div class="concept-grid">
-    <a class="concept" href="research/index.html#representation" style="text-decoration:none;">
-      <div class="concept-num">01</div><h3>Representation</h3>
-      <p>What is the format and structure of the representations that underlie linguistic meaning?</p>
-      <div class="tag">Explore this work →</div>
-    </a>
-    <a class="concept" href="research/index.html#construction" style="text-decoration:none;">
-      <div class="concept-num">02</div><h3>Construction</h3>
-      <p>How are meaningful representations built incrementally from linguistic input, context and knowledge?</p>
-      <div class="tag">Explore this work →</div>
-    </a>
-    <a class="concept" href="research/index.html#inference" style="text-decoration:none;">
-      <div class="concept-num">03</div><h3>Inference & expectation</h3>
-      <p>How do comprehenders anticipate and infer information that is not explicitly given?</p>
-      <div class="tag">Explore this work →</div>
-    </a>
-    <a class="concept" href="research/index.html#memory" style="text-decoration:none;">
-      <div class="concept-num">04</div><h3>Memory & knowledge</h3>
-      <p>How do stored knowledge and memory retrieval constrain interpretation, and what representations persist afterwards?</p>
-      <div class="tag">Explore this work →</div>
-    </a>
-  </div>
 </section>
 
 <section class="section">
-  <div class="section-head"><div><div class="section-kicker">Selected work</div><h2>Papers and projects I want to point people toward.</h2></div><a href="publications.html">View all publications →</a></div>
-  <div class="work-list">
-    <div class="work-item"><div class="work-title">The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory</div><div class="work-meta">Patson, N. & Husband, E. M. · <em>Memory & Cognition</em> · 2026</div><div class="work-note">How implicit alternatives become part of longer-lasting representations produced by comprehension.</div></div>
-    <div class="work-item"><div class="work-title">Prior and new knowledge in language comprehension: Referent lifetime status versus biographical accomplishments</div><div class="work-meta">Palleschi, D., Husband, E. M. & Knoeferle, P. · <em>Acta Psychologica</em> · 2026</div><div class="work-note">How prior and newly encountered information interact during language comprehension.</div></div>
-    <div class="work-item"><div class="work-title">An incremental QUD approach to causal discourse expectations</div><div class="work-meta">Yao, R., Altshuler, D. & Husband, E. M. · <em>Acta Psychologica</em> · 2026</div><div class="work-note">How discourse structure guides expectations as an interpretation develops incrementally.</div></div>
-    <div class="work-item"><div class="work-title">Thematic separation in light of sentence comprehension</div><div class="work-meta">Husband, E. M. · <em>Language and Linguistics Compass</em> · 2023</div><div class="work-note">What a theory of thematic representation implies for psycholinguistic models of comprehension.</div></div>
-    <div class="work-item"><div class="work-title">Prediction in the maze: Evidence for probabilistic pre-activation from the English a/an contrast</div><div class="work-meta">Husband, E. M. · <em>Glossa Psycholinguistics</em> · 2022</div><div class="work-note">Evidence that comprehenders exploit probabilistic information to anticipate upcoming linguistic material.</div></div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="split">
-    <div>
-      <div class="section-kicker">Prospective researchers</div>
-      <h2>PhD students and postdocs</h2>
-      <p>I am interested in working with researchers who want to investigate the cognitive representation of meaning, particularly where linguistic theory and experimental approaches can inform one another.</p>
-      <p>Projects might concern linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, or related questions at the interface of language and cognition.</p>
-      <a href="people.html">Information about working with me →</a>
-    </div>
-    <div class="researcher-card">
-      <div class="smallcaps">Useful links</div>
-      <p><a href="cv.html">CV (PDF)</a><br>
-      <a href="#">Google Scholar</a><br>
-      <a href="#">ORCID</a><br>
-      <a href="#">GitHub</a><br>
-      <a href="#">OSF</a></p>
-      <div class="smallcaps" style="margin-top:1.2rem;">Contact</div>
-      <p><a href="mailto:matthew.husband@ling-phil.ox.ac.uk">matthew.husband@ling-phil.ox.ac.uk</a></p>
-    </div>
-  </div>
-</section>
+::: {.section-head}
 
-<div class="footer-logos">
-  <div class="institution-row">
-    <div class="inst-mark"><div class="inst-seal">O</div><div class="inst-name"><strong>University of Oxford</strong><span>Linguistics, Philology & Phonetics</span></div></div>
-    <div class="inst-mark"><div class="inst-seal">SH</div><div class="inst-name"><strong>St Hugh's College</strong><span>University of Oxford</span></div></div>
-  </div>
-  <div class="footer-links"><a href="mailto:matthew.husband@ling-phil.ox.ac.uk">Email</a><a href="#">Google Scholar</a><a href="#">ORCID</a><a href="#">GitHub</a></div>
+::: {layout-ncol=1}
+<div class="section-kicker">Selected work</div>
+
+## Research I want to point people toward.
+:::
+
+[View all publications →](publications.html)
+:::
+
+<div class="selected-list">
+
+::: {.selected-item}
+**The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory**  
+Patson, N. & Husband, E. M. · *Memory & Cognition* · 2026
+
+How implicit alternatives become part of longer-lasting representations produced by comprehension.
+
+[DOI](https://doi.org/10.3758/s13421-026-01856-8)
+:::
+
+::: {.selected-item}
+**Prior and new knowledge in language comprehension: Referent lifetime status versus biographical accomplishments**  
+Palleschi, D., Husband, E. M. & Knoeferle, P. · *Acta Psychologica* · 2026
+
+How prior and newly encountered information interact during comprehension.
+
+[DOI](https://doi.org/10.1016/j.actpsy.2026.106579)
+:::
+
+::: {.selected-item}
+**An incremental QUD approach to causal discourse expectations**  
+Yao, R., Altshuler, D. & Husband, E. M. · *Acta Psychologica* · 2026
+
+How discourse structure guides expectations as an interpretation develops incrementally.
+
+[DOI](https://doi.org/10.1016/j.actpsy.2026.107670)
+:::
+
+::: {.selected-item}
+**Thematic separation in light of sentence comprehension**  
+Husband, E. M. · *Language and Linguistics Compass* · 2023
+
+What a theory of thematic representation implies for psycholinguistic modelling.
+
+[DOI](https://doi.org/10.1111/lnc3.12496)
+:::
+
+::: {.selected-item}
+**Prediction in the maze: Evidence for probabilistic pre-activation from the English a/an contrast**  
+Husband, E. M. · *Glossa Psycholinguistics* · 2022
+
+Evidence that comprehenders exploit probabilistic information to anticipate upcoming linguistic material.
+
+[DOI](https://doi.org/10.5070/G601153)
+:::
+
 </div>
+
+</section>
+
+<section class="section prospective-home">
+
+::: {.split}
+
+::: {.section-copy}
+<div class="section-kicker">Prospective researchers</div>
+
+## DPhil students and postdocs
+
+I am interested in working with researchers who want to investigate the cognitive representation of meaning, particularly where linguistic theory and experimental approaches can inform one another.
+
+Projects might concern linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, or related questions at the interface of language and cognition.
+
+[Information about working with me →](people.html)
+:::
+
+::: {.researcher-card}
+<div class="smallcaps">Useful links</div>
+
+[CV (PDF)](cv.html)  
+[Google Scholar](https://scholar.google.com/citations?user=R-e8yNsAAAAJ)  
+[ORCID](https://orcid.org/0000-0002-6446-5582)  
+[GitHub](https://github.com/emhusband)
+:::
+
+:::
+
+</section>
+
+<footer class="footer-logos">
+
+::: {.institution-row}
+
+::: {.inst-mark}
+<div class="inst-seal">O</div>
+<div class="inst-name"><strong>University of Oxford</strong><span>Linguistics, Philology & Phonetics</span></div>
+:::
+
+::: {.inst-mark}
+<div class="inst-seal">SH</div>
+<div class="inst-name"><strong>St Hugh's College</strong><span>University of Oxford</span></div>
+:::
+
+:::
+
+::: {.footer-links}
+[Email](mailto:matthew.husband@ling-phil.ox.ac.uk)  ·  [Google Scholar](https://scholar.google.com/citations?user=R-e8yNsAAAAJ)  ·  [ORCID](https://orcid.org/0000-0002-6446-5582)  ·  [GitHub](https://github.com/emhusband)
+:::
+
+</footer>

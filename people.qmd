@@ -3,35 +3,31 @@ title: "People"
 ---
 
 <div class="page-title">
-  <div class="section-kicker">People</div>
-  <h1>Research community</h1>
-  <p>This page is designed to make the people connected to the research easy to find, without turning the personal site into a second laboratory website.</p>
+<div class="section-kicker">People</div>
+
+# Working with me
+
+My research sits at the intersection of linguistic theory, psycholinguistics and cognitive science. I am particularly interested in working with researchers who want to use precise questions about linguistic representation to investigate cognition, and empirical evidence about processing to refine theories of representation.
 </div>
 
 <section class="section">
-  <div class="section-kicker">Prospective researchers</div>
-  <h2>Working with me</h2>
-  <div class="section-copy">
-    <p>I am particularly interested in supervising work on the cognitive representation of meaning and in projects that bring linguistic theory into conversation with experimental psycholinguistics.</p>
-    <p>Good fits could involve linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition.</p>
-    <div class="callout"><strong>Application note.</strong> The exact opportunities and funding routes change over time. Prospective researchers should use the contact details below to ask about current supervision possibilities and fit.</div>
-    <p><a href="mailto:matthew.husband@ling-phil.ox.ac.uk">Email me about research fit →</a></p>
-  </div>
+<div class="section-kicker">Prospective researchers</div>
+
+## DPhil students and postdocs
+
+Projects might concern the cognitive representation of meaning, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition.
+
+A strong fit need not reproduce my existing projects. What matters most is a well-specified question for which linguistic theory and experimental evidence can usefully constrain one another.
+
+Please consult the current Oxford and St Hugh's College pages for formal admissions information and funding arrangements.
 </section>
 
 <section class="section">
-  <div class="section-kicker">Collaborative work</div>
-  <h2>Selected research collaborations</h2>
-  <div class="person-grid">
-    <div class="person"><div class="person-name">Dimitra Lazaridou-Chatzigoga</div><div class="person-role">Generics Across Languages</div><p>Collaborative work broadening the descriptive and typological understanding of generic expressions.</p></div>
-    <div class="person"><div class="person-name">Linnaea Stockall</div><div class="person-role">Generics Across Languages / linguistic representation</div><p>Collaborative work on genericity and the representation of linguistic structure.</p></div>
-    <div class="person"><div class="person-name">Suzi Lima</div><div class="person-role">Generics Across Languages</div><p>Collaborative work on cross-linguistic variation in generic expressions.</p></div>
-    <div class="person"><div class="person-name">Current students & researchers</div><div class="person-role">To be populated</div><p>The final site should list current students, postdocs and research assistants here once the current roster is confirmed.</p></div>
-  </div>
-</section>
+<div class="section-kicker">Research community</div>
 
-<section class="section">
-  <div class="section-kicker">Affiliations</div>
-  <h2>Oxford</h2>
-  <p class="section-copy">I am Professor of Psycholinguistics in the Faculty of Linguistics, Philology and Phonetics at the University of Oxford and a Tutorial Fellow at St Hugh's College. My research is carried out within Oxford's psycholinguistics research community.</p>
+## People and collaborations
+
+The research programme connects with the wider psycholinguistics, semantics and cognitive-science communities at Oxford, including work in the Language and Brain Lab and related groups.
+
+The current roster of students and researchers will be added here once it has been checked against the latest departmental and college listings.
 </section>
