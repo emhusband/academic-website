@@ -516,3 +516,139 @@ main.content {
     max-width: 310px;
   }
 }
+
+/* --- v5.1 layout refinements --- */
+@media (min-width: 901px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.02fr) minmax(260px, .78fr);
+    gap: 2.6rem;
+  }
+
+  .hero-side {
+    align-items: center;
+  }
+
+  .profile-frame,
+  .hero-side-links {
+    width: min(100%, 290px);
+  }
+
+  .hero-side-links {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: .35rem;
+  }
+
+  .hero-copy {
+    padding-right: 0;
+  }
+}
+
+.research-glance .section-head {
+  align-items: baseline;
+  margin-bottom: .8rem;
+}
+
+.research-glance .section-action {
+  align-self: baseline;
+}
+
+.research-glance .research-intro {
+  max-width: 92rem;
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+}
+
+.selected-grid {
+  grid-template-columns: 1fr !important;
+}
+
+.selected-list .selected-item {
+  grid-column: 1 / -1;
+}
+
+.prospective-wide {
+  display: block !important;
+  max-width: 92rem;
+}
+
+.prospective-wide p {
+  max-width: 84ch;
+}
+
+/* --- v5.2 refinements --- */
+@media (min-width: 901px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.16fr) minmax(270px, .64fr);
+    gap: 2.25rem;
+  }
+
+  .profile-frame,
+  .hero-side-links {
+    width: min(100%, 270px);
+  }
+
+  .hero-side-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .2rem;
+    margin-top: .65rem;
+  }
+
+  .hero-side-links a {
+    flex-direction: column;
+    gap: .22rem;
+  }
+
+  .hero-side-links .link-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+/* Full-width content after the hero, with actions aligned to section titles. */
+.research-glance .section-head,
+.selected-work-section .section-head,
+.prospective-home .section-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+}
+
+.research-glance .section-head > div:first-child,
+.selected-work-section .section-head > div:first-child,
+.prospective-home .section-head > div:first-child {
+  width: 100%;
+}
+
+.research-glance .section-action,
+.selected-work-section .section-action,
+.prospective-home .section-action {
+  align-self: baseline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.selected-work-section .selected-list,
+.prospective-home .prospective-wide {
+  width: 100%;
+}
+
+.selected-work-section .selected-item {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-frame,
+  .hero-side-links {
+    width: min(100%, 270px);
+  }
+
+  .hero-side-links {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .25rem;
+  }
+}

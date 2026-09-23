@@ -75,7 +75,7 @@ My work combines linguistic theory and experimental psycholinguistics because **
 <a class="section-action" href="publications.html">View all publications <span aria-hidden="true">→</span></a>
 :::
 
-<div class="selected-list selected-grid">
+<div class="selected-list">
 
 ::: {.selected-item}
 **The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory**  
