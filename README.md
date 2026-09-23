@@ -1,46 +1,27 @@
-# E. Matthew Husband — Quarto/GitHub Pages prototype
+# E. Matthew Husband — Quarto website prototype
 
-A working prototype for a professional academic website built with Quarto and intended for GitHub Pages.
-
-## Structure
-
-- `index.qmd` — homepage
-- `research/index.qmd` — research programme + topic filters
-- `publications.qmd` — publications + topic filters
-- `people.qmd` — prospective researchers / collaborations
-- `teaching.qmd` — teaching
-- `cv.qmd` — CV download shell
-- `css/site.scss` — visual system
-- `js/research-filters.js` — client-side topic filters
-- `images/` — profile image placeholder
-- `files/` — CV PDF placeholder
-- `.github/workflows/publish.yml` — GitHub Pages deployment
-
-## Deployment
-
-The repository uses the GitHub Pages artifact deployment workflow: Quarto renders to `_site`, GitHub uploads the rendered artifact, and `actions/deploy-pages` publishes it. There is no `gh-pages` branch.
-
-## Before final publishing
-
-1. Replace `images/profile-placeholder.svg` with the preferred profile photograph, updating the reference in `index.qmd` if needed.
-2. Add the current CV at `files/matthew-husband-cv.pdf`.
-3. Replace/update external links as needed; Google Scholar, ORCID and GitHub are seeded with confirmed public profiles.
-4. Confirm the People page against current Oxford / St Hugh's listings.
-5. Select the final set of highlighted publications and research tags.
-6. Refine homepage and research-page wording after browser review.
+Scientific-minimal academic website prototype for GitHub Pages.
 
 ## Local preview
 
-Install Quarto, then from the project directory run:
+Install [Quarto](https://quarto.org/) and run:
 
 ```bash
 quarto preview
 ```
 
-Build with:
+## Render
 
 ```bash
 quarto render
 ```
 
-The rendered site appears in `_site/`.
+The rendered site is written to `_site/`.
+
+## Publish
+
+The repository is configured for GitHub Pages using GitHub Actions. The workflow lives at `.github/workflows/publish.yml`.
+
+## Design direction
+
+The site uses a wide, restrained academic layout with serif headings, a minimal sans-serif interface, institutional affiliations in the footer, and a slowly evolving SVG research network. The network is functional as well as conceptual: its three labelled regions link to research filters for Representation, Construction & Inference, and Memory & Knowledge.

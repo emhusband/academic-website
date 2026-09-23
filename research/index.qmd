@@ -15,7 +15,7 @@ Linguistic theory and experimental psycholinguistics are complementary parts of 
 <section class="section" id="explore">
 <div class="section-kicker">Explore the programme</div>
 
-## Four ways into the research
+## Different ways into the same research programme
 
 <p class="section-intro">These are entry points into the portfolio rather than independent research programmes. Work can belong to several categories at once.</p>
 
@@ -35,7 +35,7 @@ I use linguistic analyses of compositional structure, event representation, gene
 
 ::: {.research-theme #construction data-tags="construction representation inference"}
 
-<div class="theme-label">02 · Construction</div>
+<div class="theme-label">02 · Construction &amp; inference</div>
 
 ### How are meaningful representations built?
 
@@ -47,7 +47,7 @@ Sentence interpretation is incremental. This work asks how linguistic structure,
 
 ::: {.research-theme #inference data-tags="inference construction discourse"}
 
-<div class="theme-label">03 · Inference & expectation</div>
+<div class="theme-label">03 · Inference &amp; expectation</div>
 
 ### How does the comprehender go beyond what is explicitly given?
 
@@ -59,7 +59,7 @@ This includes probabilistic prediction, structural expectation, focus alternativ
 
 ::: {.research-theme #memory data-tags="memory representation inference"}
 
-<div class="theme-label">04 · Memory & knowledge</div>
+<div class="theme-label">04 · Memory &amp; knowledge</div>
 
 ### How do prior representations constrain interpretation?
 

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research network prototype — E. Matthew Husband</title>
+<style>
+  :root {
+    --ink: #17283b;
+    --muted: #6d7884;
+    --line: #dce2e8;
+    --blue: #4b86c5;
+    --green: #4b9b86;
+    --amber: #d39b4f;
+    --paper: #fff;
+    --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: var(--sans);
+  }
+  .wrap { max-width: 1500px; margin: 0 auto; padding: 70px 40px 90px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 700; color: #2869a5; margin-bottom: .65rem; }
+  h1 { font: 500 clamp(2.15rem, 4vw, 3.7rem)/1.08 var(--serif); letter-spacing: -.02em; margin: 0 0 .55rem; }
+  .intro { font: 1.08rem/1.55 var(--serif); color: #445263; max-width: 75ch; margin: 0; }
+  .network-wrap { position: relative; margin-top: 34px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
+  #network { width: 100%; height: auto; min-height: 480px; display: block; }
+  .label-grid { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; pointer-events: none; }
+  .concept { align-self: center; justify-self: center; width: min(28rem, 82%); text-align: center; pointer-events: auto; transition: transform .5s ease; }
+  .concept:hover { transform: translateY(-2px); }
+  .concept h2 { margin: 0 0 .35rem; font: 500 clamp(1.35rem, 2.4vw, 2rem)/1.1 var(--serif); }
+  .concept p { margin: 0; font: italic clamp(.95rem, 1.55vw, 1.15rem)/1.3 var(--serif); color: #526072; }
+  .legend { display: flex; flex-wrap: wrap; gap: 1.4rem; margin-top: 20px; color: var(--muted); font-size: .8rem; }
+  .legend span { display: inline-flex; align-items: center; gap: .5rem; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .dot.blue { background: var(--blue); }
+  .dot.green { background: var(--green); }
+  .dot.amber { background: var(--amber); }
+  .note { margin-top: 32px; max-width: 75ch; color: var(--muted); font-size: .92rem; line-height: 1.6; }
+  @media (max-width: 800px) {
+    .wrap { padding: 46px 20px 60px; }
+    .network-wrap { overflow-x: auto; }
+    #network { min-width: 920px; min-height: 420px; }
+    .label-grid { min-width: 920px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .concept { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Animated research network prototype</div>
+  <h1>Meaning as a cognitive representation</h1>
+  <p class="intro">A slowly changing network in which representations emerge, connect, drift and fade. The three regions remain distinct without implying a rigid sequence or hierarchy.</p>
+
+  <div class="network-wrap" aria-label="Animated research network showing Representation, Construction and Inference, and Memory and Knowledge">
+    <svg id="network" viewBox="0 0 1400 520" role="img" aria-labelledby="network-title network-desc">
+      <title id="network-title">Meaning as a cognitive representation</title>
+      <desc id="network-desc">A slowly moving network with three overlapping fields representing representation, construction and inference, and memory and knowledge.</desc>
+      <defs>
+        <radialGradient id="wash-blue"><stop offset="0%" stop-color="#4b86c5" stop-opacity="0.12"/><stop offset="100%" stop-color="#4b86c5" stop-opacity="0"/></radialGradient>
+        <radialGradient id="wash-green"><stop offset="0%" stop-color="#4b9b86" stop-opacity="0.12"/><stop offset="100%" stop-color="#4b9b86" stop-opacity="0"/></radialGradient>
+        <radialGradient id="wash-amber"><stop offset="0%" stop-color="#d39b4f" stop-opacity="0.12"/><stop offset="100%" stop-color="#d39b4f" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g aria-hidden="true">
+        <ellipse cx="355" cy="260" rx="390" ry="220" fill="url(#wash-blue)"/>
+        <ellipse cx="700" cy="260" rx="390" ry="220" fill="url(#wash-green)"/>
+        <ellipse cx="1045" cy="260" rx="390" ry="220" fill="url(#wash-amber)"/>
+      </g>
+      <g id="edges" aria-hidden="true"></g>
+      <g id="nodes" aria-hidden="true"></g>
+    </svg>
+    <div class="label-grid">
+      <a class="concept" href="research/index.html?topic=representation#explore" data-region="blue" aria-label="Explore Representation research">
+        <h2>Representation</h2>
+        <p>What is the format and structure of meaning?</p>
+      </a>
+      <a class="concept" href="research/index.html?topic=inference#explore" data-region="green" aria-label="Explore Construction and Inference research">
+        <h2>Construction &amp; Inference</h2>
+        <p>How is meaning built, enriched, and used?</p>
+      </a>
+      <a class="concept" href="research/index.html?topic=memory#explore" data-region="amber" aria-label="Explore Memory and Knowledge research">
+        <h2>Memory &amp; Knowledge</h2>
+        <p>How is meaning encoded, organized, and retrieved?</p>
+      </a>
+    </div>
+  </div>
+
+  <p class="note">The animation is intentionally restrained: nodes drift slowly, change size and opacity, form and lose connections, and are replaced over time. A reduced-motion setting produces a quiet static state instead.</p>
+</div>
+<script>
+(() => {
+  const svg = document.getElementById('network');
+  const edgeLayer = document.getElementById('edges');
+  const nodeLayer = document.getElementById('nodes');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const W = 1400, H = 520;
+  const regionDefs = [
+    { key: 'blue', center: 365, color: '#4b86c5', spread: 270 },
+    { key: 'green', center: 700, color: '#4b9b86', spread: 285 },
+    { key: 'amber', center: 1035, color: '#d39b4f', spread: 270 }
+  ];
+  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const nodes = [];
+  const N = 48;
+
+  function spawn(regionIndex, now, initial = false) {
+    const r = regionDefs[regionIndex];
+    const x = r.center + rand(-r.spread, r.spread);
+    const y = rand(70, H - 70);
+    return {
+      id: Math.random().toString(36).slice(2),
+      regionIndex,
+      x, y,
+      bx: x, by: y,
+      vx: rand(-0.035, 0.035), vy: rand(-0.028, 0.028),
+      phase: rand(0, Math.PI * 2),
+      born: initial ? now - rand(5000, 16000) : now,
+      lifetime: rand(22000, 48000),
+      size: rand(2.4, 6.8),
+      pulse: rand(0.55, 1.25),
+      opacity: rand(0.42, 0.82),
+      el: null
+    };
+  }
+
+  let now = performance.now();
+  regionDefs.forEach((_, ri) => {
+    for (let i = 0; i < 16; i++) nodes.push(spawn(ri, now, true));
+  });
+  nodes.push(spawn(0, now, true), spawn(1, now, true), spawn(2, now, true));
+
+  function nodeOpacity(n, t) {
+    const age = (t - n.born) / n.lifetime;
+    const fadeIn = clamp(age / 0.08, 0, 1);
+    const fadeOut = clamp((1 - age) / 0.10, 0, 1);
+    return n.opacity * Math.min(fadeIn, fadeOut);
+  }
+  function nearestCandidates(n) {
+    return nodes
+      .filter(o => o !== n)
+      .map(o => {
+        const dx = o.x - n.x, dy = o.y - n.y;
+        return { o, d: Math.hypot(dx, dy) };
+      })
+      .filter(x => x.d < 190)
+      .sort((a, b) => a.d - b.d)
+      .slice(0, 3);
+  }
+
+  const edges = new Map();
+  function edgeKey(a, b) { return a.id < b.id ? a.id + '|' + b.id : b.id + '|' + a.id; }
+
+  function updateEdges(t) {
+    const desired = new Set();
+    nodes.forEach(n => {
+      nearestCandidates(n).forEach(({o, d}) => {
+        const cross = n.regionIndex !== o.regionIndex;
+        const p = cross ? 0.20 : 0.34;
+        if (Math.random() < p * (1 - d / 210) + 0.08) desired.add(edgeKey(n, o));
+      });
+    });
+    desired.forEach(key => {
+      if (!edges.has(key)) {
+        const [a, b] = key.split('|');
+        edges.set(key, { a, b, created: t, lifetime: rand(5000, 14000) });
+      }
+    });
+    [...edges.entries()].forEach(([key, e]) => {
+      if (t - e.created > e.lifetime) edges.delete(key);
+    });
+  }
+
+  function render(t) {
+    if (!reduceMotion) updateEdges(t);
+    const byId = new Map(nodes.map(n => [n.id, n]));
+    edgeLayer.innerHTML = '';
+    edges.forEach(e => {
+      const a = byId.get(e.a), b = byId.get(e.b);
+      if (!a || !b) return;
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      const oa = nodeOpacity(a, t), ob = nodeOpacity(b, t);
+      const age = (t - e.created) / e.lifetime;
+      const edgeLife = Math.min(clamp(age / .15, 0, 1), clamp((1 - age) / .18, 0, 1));
+      const alpha = edgeLife * Math.min(oa, ob) * 0.42;
+      line.setAttribute('x1', a.x.toFixed(2));
+      line.setAttribute('y1', a.y.toFixed(2));
+      line.setAttribute('x2', b.x.toFixed(2));
+      line.setAttribute('y2', b.y.toFixed(2));
+      line.setAttribute('stroke', regionDefs[a.regionIndex].color);
+      line.setAttribute('stroke-opacity', alpha.toFixed(3));
+      line.setAttribute('stroke-width', '1');
+      line.setAttribute('stroke-linecap', 'round');
+      edgeLayer.appendChild(line);
+    });
+
+    nodeLayer.innerHTML = '';
+    nodes.forEach(n => {
+      const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      const pulse = reduceMotion ? 1 : (1 + 0.18 * Math.sin(t / 2100 * n.pulse + n.phase));
+      const radius = n.size * pulse;
+      const alpha = nodeOpacity(n, t);
+      c.setAttribute('cx', n.x.toFixed(2));
+      c.setAttribute('cy', n.y.toFixed(2));
+      c.setAttribute('r', radius.toFixed(2));
+      c.setAttribute('fill', regionDefs[n.regionIndex].color);
+      c.setAttribute('fill-opacity', clamp(alpha, 0, 0.9).toFixed(3));
+      nodeLayer.appendChild(c);
+    });
+  }
+
+  function step(t) {
+    nodes.forEach((n, i) => {
+      if (reduceMotion) {
+        n.x += 0; n.y += 0;
+        return;
+      }
+      const dx = n.bx - n.x;
+      const dy = n.by - n.y;
+      n.vx += dx * 0.000018 + Math.sin(t / 12000 + n.phase + i) * 0.00035;
+      n.vy += dy * 0.000018 + Math.cos(t / 15000 + n.phase * 1.3) * 0.00032;
+      n.vx *= 0.996; n.vy *= 0.996;
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 45 || n.x > W - 45) n.vx *= -1;
+      if (n.y < 45 || n.y > H - 45) n.vy *= -1;
+      if (n.x < 45) n.x = 45;
+      if (n.x > W - 45) n.x = W - 45;
+      if (n.y < 45) n.y = 45;
+      if (n.y > H - 45) n.y = H - 45;
+    });
+
+    // Quiet birth/death cycle: replace fully faded nodes in their existing region.
+    for (let i = nodes.length - 1; i >= 0; i--) {
+      const n = nodes[i];
+      if (!reduceMotion && t - n.born > n.lifetime) {
+        const replacement = spawn(n.regionIndex, t, false);
+        nodes[i] = replacement;
+      }
+    }
+    render(t);
+    if (!reduceMotion) requestAnimationFrame(step);
+  }
+
+  render(now);
+  if (reduceMotion) return;
+  requestAnimationFrame(step);
+})();
+</script>
+</body>
+</html>
