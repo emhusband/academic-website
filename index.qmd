@@ -14,8 +14,6 @@ I study the cognitive representations that underlie linguistic meaning: the form
 
 My work combines linguistic theory and experimental psycholinguistics because **theories of representation and theories of processing constrain one another**.
 
-<div class="hero-affiliation">Faculty of Linguistics, Philology and Phonetics · University of Oxford<br>Tutorial Fellow · St Hugh's College</div>
-
 :::
 
 ::: {.hero-side}
@@ -25,10 +23,22 @@ My work combines linguistic theory and experimental psycholinguistics because **
 :::
 
 <div class="hero-side-links" aria-label="Professional links">
-  <a href="mailto:matthew.husband@ling-phil.ox.ac.uk">Email</a>
-  <a href="https://scholar.google.com/citations?user=R-e8yNsAAAAJ">Google Scholar</a>
-  <a href="https://orcid.org/0000-0002-6446-5582">ORCID</a>
-  <a href="https://github.com/emhusband">GitHub</a>
+  <a href="mailto:matthew.husband@ling-phil.ox.ac.uk" aria-label="Email">
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    <span>Email</span>
+  </a>
+  <a href="https://scholar.google.com/citations?user=R-e8yNsAAAAJ" aria-label="Google Scholar">
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.2L12 5l8 4.2L12 13 4 9.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 11.1v4.7c2.8 2 7.2 2 10 0v-4.7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 9.2v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <span>Google Scholar</span>
+  </a>
+  <a href="https://orcid.org/0000-0002-6446-5582" aria-label="ORCID">
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.9" cy="9" r="1.2" fill="currentColor"/><path d="M9 11.5v4.7M12.2 11.5h1.4c2.8 0 2.8 4.7 0 4.7h-1.4v-4.7Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>ORCID</span>
+  </a>
+  <a href="https://github.com/emhusband" aria-label="GitHub">
+    <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.1a7.9 7.9 0 0 0-2.5 15.4c.4.1.5-.2.5-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.5 0-.5 0-.5.8.1 1.2.8 1.2.8.7 1.2 1.8.9 2.2.7.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.5 0-.8.3-1.5.8-2-.1-.2-.4-.9.1-1.9 0 0 .7-.2 2.1.8a7.2 7.2 0 0 1 3.8 0c1.4-1 2.1-.8 2.1-.8.5 1 .2 1.7.1 1.9.5.5.8 1.2.8 2 0 2.7-1.7 3.3-3.3 3.5.3.3.5.7.5 1.4v2.1c0 .2.1.5.5.4A7.9 7.9 0 0 0 12 4.1Z" fill="currentColor"/></svg>
+    <span>GitHub</span>
+  </a>
 </div>
 
 :::
@@ -38,33 +48,34 @@ My work combines linguistic theory and experimental psycholinguistics because **
 <section class="section research-glance" id="research-at-a-glance">
 
 ::: {.section-head}
-::: {layout-ncol=1}
+<div>
 <div class="section-kicker">Research at a glance</div>
 
 ## How does the mind construct and use meaning?
 
 <p class="research-intro">I use linguistic theory to formulate precise hypotheses about meaningful representations, and experimental psycholinguistics to investigate how those representations are built and used. The three perspectives below are different entry points into the same problem.</p>
-:::
-[Explore the research →](research/index.html)
+</div>
+
+<a class="section-action" href="research/index.html">Explore the research <span aria-hidden="true">→</span></a>
 :::
 
 <div id="research-network" class="research-network" aria-label="Interactive overview of the research programme"></div>
 
-
 </section>
 
-<section class="section">
+<section class="section selected-work-section">
 
 ::: {.section-head}
-::: {layout-ncol=1}
+<div>
 <div class="section-kicker">Selected work</div>
 
 ## Research I want to point people toward.
-:::
-[View all publications →](publications.html)
+</div>
+
+<a class="section-action" href="publications.html">View all publications <span aria-hidden="true">→</span></a>
 :::
 
-<div class="selected-list">
+<div class="selected-list selected-grid">
 
 ::: {.selected-item}
 **The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory**  
@@ -117,16 +128,20 @@ Evidence that comprehenders exploit probabilistic information to anticipate upco
 
 <section class="section prospective-home">
 
-<div class="section-copy prospective-copy">
+::: {.section-head}
+<div>
 <div class="section-kicker">Prospective researchers</div>
 
 ## DPhil students and postdocs
+</div>
 
-I am interested in working with researchers who want to investigate the cognitive representation of meaning, particularly where linguistic theory and experimental approaches can inform one another.
+<a class="section-action" href="people.html">Information about working with me <span aria-hidden="true">→</span></a>
+:::
 
-Projects might concern linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition. A strong fit need not reproduce my existing projects; what matters is a well-specified question for which linguistic theory and experimental evidence can usefully constrain one another.
+<div class="prospective-wide">
+<p>I am interested in working with researchers who want to investigate the cognitive representation of meaning, particularly where linguistic theory and experimental approaches can inform one another.</p>
 
-[Information about working with me →](people.html)
+<p>Projects might concern linguistic representation, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition. A strong fit need not reproduce my existing projects; what matters is a well-specified question for which linguistic theory and experimental evidence can usefully constrain one another.</p>
 </div>
 
 </section>

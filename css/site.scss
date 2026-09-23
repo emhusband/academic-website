@@ -345,3 +345,174 @@ main.content {
 @media (prefers-reduced-motion: reduce) {
   .network-label { transition: none; }
 }
+
+/* --- v4.1 refinements: hero contacts and full-width content sections --- */
+.hero {
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr);
+  gap: 4.5rem;
+}
+
+.hero-affiliation { display: none; }
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.profile-frame {
+  width: min(100%, 310px);
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 4 / 4.7;
+}
+
+.hero-side-links {
+  width: min(100%, 310px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .55rem;
+  margin-top: .8rem;
+  font-size: .78rem;
+}
+
+.hero-side-links a {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .28rem;
+  color: $ink;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.hero-side-links a:hover { color: $blue; }
+
+.link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.hero .eyebrow {
+  max-width: 34rem;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 2rem;
+}
+
+.section-head > div:first-child {
+  min-width: 0;
+}
+
+.section-action {
+  align-self: end;
+  white-space: nowrap;
+  font-size: .88rem;
+  text-decoration: none;
+  margin-bottom: .15rem;
+}
+
+.research-glance .section-head > div:first-child,
+.selected-work-section .section-head > div:first-child,
+.prospective-home .section-head > div:first-child {
+  max-width: none;
+}
+
+.research-intro {
+  max-width: 72rem;
+}
+
+.research-network {
+  margin-top: 1.45rem;
+}
+
+.network-wrap {
+  border-top: 0;
+  border-bottom: 0;
+  background: transparent;
+}
+
+/* The research section itself supplies the single divider beneath the figure. */
+.research-glance { border-bottom: 1px solid $line; }
+
+.selected-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2.6rem;
+}
+
+.selected-grid .selected-item {
+  padding: 1.2rem 0 1.35rem;
+}
+
+.selected-grid .selected-item:nth-child(-n+2) {
+  border-top: 1px solid $line;
+}
+
+.selected-grid .selected-item:first-child,
+.selected-grid .selected-item:nth-child(2) {
+  padding-top: 1.05rem;
+}
+
+.prospective-wide {
+  max-width: 72rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3.5rem;
+}
+
+.prospective-wide p {
+  max-width: 70ch;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .hero-side {
+    align-items: flex-start;
+  }
+
+  .profile-frame,
+  .hero-side-links {
+    width: min(100%, 310px);
+  }
+
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: .55rem;
+  }
+
+  .section-action {
+    justify-self: start;
+  }
+
+  .selected-grid,
+  .prospective-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-grid .selected-item:nth-child(2) {
+    border-top: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-side-links {
+    width: 100%;
+    max-width: 310px;
+  }
+}
