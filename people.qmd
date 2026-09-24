@@ -5,29 +5,75 @@ title: "People"
 <div class="page-title">
 <div class="section-kicker">People</div>
 
-# Working with me
-
-My research sits at the intersection of linguistic theory, psycholinguistics and cognitive science. I am particularly interested in working with researchers who want to use precise questions about linguistic representation to investigate cognition, and empirical evidence about processing to refine theories of representation.
+# People
 </div>
 
-<section class="section">
-<div class="section-kicker">Prospective researchers</div>
+<section class="section people-section">
 
-## DPhil students and postdocs
+## Current researchers
 
-Projects might concern the cognitive representation of meaning, incremental interpretation, inference and prediction, memory and knowledge, discourse, or related questions at the interface of language and cognition.
+<div class="people-list">
+<div class="person-entry">
+<div class="person-name">Shahd Dibas</div>
+<div class="person-status">DPhil researcher</div>
+<div class="person-project">Structure and the domain of non-compositional meaning</div>
+</div>
+<div class="person-entry">
+<div class="person-name">Yang Fan</div>
+<div class="person-status">DPhil researcher</div>
+<div class="person-project">Garden-path reanalysis and memory retrieval</div>
+</div>
+<div class="person-entry">
+<div class="person-name">Yutong Zhang</div>
+<div class="person-status">DPhil researcher</div>
+<div class="person-project">Relating offline probability judgments and online word prediction</div>
+</div>
+</div>
 
-A strong fit need not reproduce my existing projects. What matters most is a well-specified question for which linguistic theory and experimental evidence can usefully constrain one another.
+## Former researchers
 
-Please consult the current Oxford and St Hugh's College pages for formal admissions information and funding arrangements.
+<div class="people-list people-list-compact">
+<div class="person-entry"><div class="person-name">Runyi Yao</div><div class="person-status">DPhil, 2026</div><div class="person-project">Causal inferences and expectations in discourse processing</div></div>
+<div class="person-entry"><div class="person-name">Zirui Huang</div><div class="person-status">DPhil, 2025</div><div class="person-project">Incremental structure prediction during language comprehension</div></div>
+<div class="person-entry"><div class="person-name">Luis Hildebrandt</div><div class="person-status">DPhil, 2024</div><div class="person-project">Quantifier restriction and illusory NPI licensing</div></div>
+<div class="person-entry"><div class="person-name">Arkady Kwapiszewski</div><div class="person-status">DPhil, 2022</div><div class="person-project">Aspect and event structure in Polish verbs</div></div>
+<div class="person-entry"><div class="person-name">Kim Fuellenbach</div><div class="person-status">DPhil, 2020</div><div class="person-project">Morphosyntax, genericity, and the conceptual system</div></div>
+<div class="person-entry"><div class="person-name">Anja Werkmann Horvat</div><div class="person-status">DPhil, 2017</div><div class="person-project">Layers of modality</div></div>
+<div class="person-entry"><div class="person-name">Aine Ito</div><div class="person-status">Postdoctoral researcher, 2016–17</div><div class="person-project">Enrichment and priming</div></div>
+<div class="person-entry"><div class="person-name">Stephen Politzer-Ahles</div><div class="person-status">Postdoctoral researcher, 2015–16</div><div class="person-project">Enrichment and scalar implicature</div></div>
+</div>
 </section>
 
-<section class="section">
-<div class="section-kicker">Research community</div>
+<section class="section prospective-section">
+<div class="section-kicker">Prospective researchers</div>
 
-## People and collaborations
+# Prospective researchers
 
-The research programme connects with the wider psycholinguistics, semantics and cognitive-science communities at Oxford, including work in the Language and Brain Lab and related groups.
+I welcome enquiries from prospective researchers interested in questions about meaning and cognition. I am particularly interested in projects that connect questions about linguistic representation with questions about composition, inference, memory, knowledge, or the processes involved in comprehension.
 
-The current roster of students and researchers will be added here once it has been checked against the latest departmental and college listings.
+Projects need not fall neatly within one of my current research programmes. What matters more is a clear theoretical question, a good fit with my expertise, and a willingness to use linguistic theory and empirical evidence to constrain one another.
+
+If you are considering working with me, the [Research](research/index.qmd) page is the best indication of the kinds of questions that currently interest me.
+
+## Graduate research
+
+I supervise research projects for students on Oxford's **DPhil, MPhil, and MSt (Research Preparation) in Linguistics, Philology and Phonetics** programmes. Prospective students are welcome to contact me before applying. You do not need to send a fully developed research proposal in an initial email; a short description of the problem you are interested in, why you think it connects with my research, and your relevant background is much more useful.
+
+Formal admissions requirements, deadlines and funding arrangements are handled by the University and Faculty. Please consult the Oxford graduate admissions pages for current information.
+
+## Postdoctoral researchers
+
+I am happy to discuss postdoctoral projects that fit closely with my research programme, including applications for external fellowships hosted at Oxford. If you are considering developing a fellowship proposal with me, please get in touch well in advance of the deadline: good proposals benefit from time to develop the research questions and intellectual fit together.
+
+Funded postdoctoral positions attached to particular projects, when available, will be advertised formally.
+
+## Undergraduate research
+
+I also supervise undergraduate research projects in language and cognition. Within Linguistics, **Paper C** provides an opportunity to pursue an independent research project, and I supervise projects where the question and my expertise are a good fit. I also supervise **Extended Projects for fourth-year Experimental Psychology and PPL students**, with project allocation organised annually through Experimental Psychology.
+
+If you are an Oxford undergraduate considering an independent project, the most useful starting point is a research question rather than a fully worked-out experiment. I am happy to discuss how a promising question might be developed into a feasible project.
+
+## Getting in touch
+
+If you are contacting me about prospective research, a brief email is best. Tell me the question or problem that interests you, how you see it connecting with my research, and a little about your relevant background. A CV is useful; a long research proposal is not necessary for an initial enquiry.
 </section>
