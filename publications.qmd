@@ -3,11 +3,9 @@ title: "Publications"
 ---
 
 <div class="page-title">
-<div class="section-kicker">Publications</div>
-
 # Publications
 
-A complete working bibliography. Use the topic filters to focus the list; research tags are metadata and are not displayed on individual entries.
+Publications and other research outputs, listed chronologically and filterable by research topic.
 </div>
 
 <section class="section publications-section">

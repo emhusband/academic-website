@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   host.innerHTML = `
     <div class="network-wrap">
       <svg id="research-network-svg" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="network-title network-desc">
-        <title id="network-title">Meaning as a cognitive representation</title>
+        <title id="network-title">Research on meaning and cognition</title>
         <desc id="network-desc">An animated network with three overlapping fields representing representation, construction and inference, and memory and knowledge.</desc>
         <defs>
           <radialGradient id="wash-blue"><stop offset="0%" stop-color="#4b86c5" stop-opacity="0.10"/><stop offset="100%" stop-color="#4b86c5" stop-opacity="0"/></radialGradient>

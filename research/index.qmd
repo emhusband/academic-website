@@ -15,8 +15,6 @@ title: "Research"
 <section class="section research-programmes" id="programmes">
 <div class="section-kicker">Research programmes</div>
 
-<p class="section-intro">Explore the programmes below, or use the links to jump directly to a particular line of work.</p>
-
 <nav class="research-programme-nav" aria-label="Research programmes">
   <a href="#grammatical-structure">Grammatical structure and the representation of meaning</a>
   <a href="#expectation-inference">Expectation and inference</a>

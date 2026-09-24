@@ -17,7 +17,7 @@ website:
         text: Publications
       - href: people.qmd
         text: People
-      - href: cv.qmd
+      - href: files/matthew-husband-cv.pdf
         text: CV
   page-footer:
     left: "E. Matthew Husband"

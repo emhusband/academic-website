@@ -14,8 +14,8 @@ Teaching is intentionally omitted from the top-level site.
 ## Publishing
 `.github/workflows/publish.yml` uses the GitHub Pages artifact deployment workflow. Push to `main` and GitHub Actions will render and deploy the site.
 
-## Remaining placeholders
-- `images/profile-placeholder.svg` should eventually be replaced with the preferred photograph.
-- `files/matthew-husband-cv.pdf` should be added for the CV link.
+## Assets and remaining checks
+- `images/profile.jpg` is the homepage portrait.
+- The CV navbar item points directly to `files/matthew-husband-cv.pdf`; add the current PDF at that path before deployment.
 - Some publication links can be enriched later with PDFs, DOIs, data, and materials.
 - People and bibliography details should be reviewed once more before the public launch.

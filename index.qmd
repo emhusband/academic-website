@@ -8,9 +8,9 @@ title: ""
 
 <div class="eyebrow">Professor of Psycholinguistics · University of Oxford</div>
 
-# Meaning as a cognitive representation
+# How does the mind represent and use meaning?
 
-<p>My research investigates how meaning is represented and used in the mind: what form those representations take, how they are constructed, enriched, and inferred during comprehension, and how they are encoded, organized, and retrieved from memory.</p>
+<p>My research investigates how the mind represents and uses meaning: what form meaningful representations take, how they are constructed, enriched, and inferred during comprehension, and how they are encoded, organized, and retrieved from memory.</p>
 
 <p>My approach brings linguistic theory and experimental psycholinguistics together. Linguistic theory provides explicit hypotheses about how meaningful representations are structured; psycholinguistic theory provides hypotheses about the cognitive processes that construct and use those representations. Empirical evidence tests the predictions that follow from both, providing complementary constraints on theories of meaning and cognition.</p>
 
@@ -19,7 +19,7 @@ title: ""
 ::: {.hero-side}
 
 ::: {.profile-frame}
-<div class="profile-photo"><img src="images/profile-placeholder.svg" alt="E. Matthew Husband"></div>
+<div class="profile-photo"><img src="images/profile.jpg" alt="E. Matthew Husband"></div>
 :::
 
 <div class="hero-side-links" aria-label="Professional links">
@@ -67,10 +67,10 @@ title: ""
 <div>
 <div class="section-kicker">Selected work</div>
 
-## Research I want to point people toward.
+## Questions across the research programme
 </div>
 
-<a class="section-action" href="publications.qmd">View all publications <span aria-hidden="true">→</span></a>
+<a class="section-action" href="publications.html">View all publications <span aria-hidden="true">→</span></a>
 :::
 
 <div class="selected-list">
@@ -137,16 +137,16 @@ What does the way events are grammatically encoded tell us about how events them
 <div>
 <div class="section-kicker">Prospective researchers</div>
 
-## DPhil students and postdocs
+## Working with me
 </div>
 
-<a class="section-action" href="people.qmd">Information about working with me <span aria-hidden="true">→</span></a>
+<a class="section-action" href="people.html">Information about working with me <span aria-hidden="true">→</span></a>
 :::
 
 <div class="prospective-wide">
-<p>I welcome enquiries from prospective DPhil students and postdoctoral researchers interested in meaning and cognition, particularly projects that connect questions about linguistic representation with questions about processing, inference, memory, or knowledge. I am especially interested in work that uses linguistic theory and experimental evidence to constrain one another.</p>
+<p>I welcome enquiries from prospective researchers interested in meaning and cognition, particularly projects that connect questions about linguistic representation with questions about composition, inference, memory, knowledge, or the processes involved in comprehension. I am especially interested in work that uses linguistic theory and experimental evidence to constrain one another.</p>
 
-<p>Your project need not fall neatly within one of my current research topics. I am most interested in supervising work driven by a clear theoretical question about how meaning is represented, constructed, or used.</p>
+<p>Your project need not fall neatly within one of my current research programmes. I am most interested in supervising work driven by a clear theoretical question about how meaning is represented, constructed, or used.</p>
 </div>
 
 </section>

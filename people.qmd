@@ -3,8 +3,6 @@ title: "People"
 ---
 
 <div class="page-title">
-<div class="section-kicker">People</div>
-
 # People
 </div>
 
@@ -45,15 +43,13 @@ title: "People"
 </section>
 
 <section class="section prospective-section">
-<div class="section-kicker">Prospective researchers</div>
-
 # Prospective researchers
 
 I welcome enquiries from prospective researchers interested in questions about meaning and cognition. I am particularly interested in projects that connect questions about linguistic representation with questions about composition, inference, memory, knowledge, or the processes involved in comprehension.
 
 Projects need not fall neatly within one of my current research programmes. What matters more is a clear theoretical question, a good fit with my expertise, and a willingness to use linguistic theory and empirical evidence to constrain one another.
 
-If you are considering working with me, the [Research](research/index.qmd) page is the best indication of the kinds of questions that currently interest me.
+If you are considering working with me, the [Research](research/index.html) page is the best indication of the kinds of questions that currently interest me.
 
 ## Graduate research
 

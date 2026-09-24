@@ -213,7 +213,7 @@ a:hover { color: $blue-dark; }
   .section-head { align-items: flex-start; flex-direction: column; }
 }
 
-/* --- v4 layout and animated research network --- */
+/* --- layout refinements --- */
 .quarto-container,
 #quarto-content {
   width: 100% !important;
@@ -346,7 +346,7 @@ main.content {
   .network-label { transition: none; }
 }
 
-/* --- v4.1 refinements: hero contacts and full-width content sections --- */
+/* --- layout refinements --- */
 .hero {
   grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr);
   gap: 4.5rem;
@@ -517,7 +517,7 @@ main.content {
   }
 }
 
-/* --- v5.1 layout refinements --- */
+/* --- layout refinements --- */
 @media (min-width: 901px) {
   .hero {
     grid-template-columns: minmax(0, 1.02fr) minmax(260px, .78fr);
@@ -575,7 +575,7 @@ main.content {
   max-width: 84ch;
 }
 
-/* --- v5.2 refinements --- */
+/* --- layout refinements --- */
 @media (min-width: 901px) {
   .hero {
     grid-template-columns: minmax(0, 1.16fr) minmax(270px, .64fr);
@@ -653,7 +653,7 @@ main.content {
   }
 }
 
-/* --- v7 research programme presentation --- */
+/* --- layout refinements --- */
 .research-programmes { padding-top: 2.6rem; }
 .research-programme { padding: 3.2rem 0 3.5rem; border-top: 1px solid $line; }
 .research-programme:first-of-type { border-top: 0; padding-top: 0; }
@@ -671,11 +671,11 @@ main.content {
   .research-programme { padding: 2.5rem 0 2.8rem; }
 }
 
-/* --- v7 research filters --- */
+/* --- layout refinements --- */
 .research-programmes > .section-intro { max-width: 74ch; margin-bottom: .25rem; }
 .research-work-list .research-work[hidden] { display: none !important; }
 
-/* --- v7 research work labels --- */
+/* --- layout refinements --- */
 .work-kicker {
   text-transform: uppercase;
   letter-spacing: .14em;
@@ -687,7 +687,7 @@ main.content {
 }
 .research-programme:first-of-type .work-kicker { margin-top: 1.6rem; }
 
-/* --- v8 research page typography and width refinements --- */
+/* --- layout refinements --- */
 .page-title h1 {
   font-size: clamp(2.55rem, 4.2vw, 3.7rem);
   margin-bottom: .55rem;
@@ -713,7 +713,7 @@ main.content {
   max-width: none;
 }
 
-/* --- v8.1 research-page cleanup --- */
+/* --- layout refinements --- */
 .page-title h1 {
   font-size: clamp(2.65rem, 4.4vw, 3.75rem);
   line-height: 1.05;
@@ -738,7 +738,7 @@ main.content {
   margin-left: 0;
 }
 
-/* --- v9 research page layout and work citation fixes --- */
+/* --- layout refinements --- */
 main.content {
   width: min(1380px, calc(100vw - 4rem)) !important;
 }
@@ -827,7 +827,7 @@ main.content {
 }
 
 
-/* --- v9.1 site-wide content width --- */
+/* --- layout refinements --- */
 p { max-width: 120ch; }
 .section-copy, .section-intro, .research-intro, .prospective-wide { max-width: 120ch; }
 .hero-copy > p { max-width: none; }
@@ -836,7 +836,7 @@ p { max-width: 120ch; }
   p { max-width: 100%; }
 }
 
-/* --- v10 structured publications and people --- */
+/* --- layout refinements --- */
 .publications-section { padding-top: 2.2rem; }
 .pub-year {
   font-family: $sans;
