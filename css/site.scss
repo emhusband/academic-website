@@ -652,3 +652,37 @@ main.content {
     gap: .25rem;
   }
 }
+
+/* --- v7 research programme presentation --- */
+.research-programmes { padding-top: 2.6rem; }
+.research-programme { padding: 3.2rem 0 3.5rem; border-top: 1px solid $line; }
+.research-programme:first-of-type { border-top: 0; padding-top: 0; }
+.research-programme h2 { margin-bottom: .85rem; }
+.research-question { max-width: 78ch; font-family: $serif; font-size: 1.22rem; color: #344252; margin-bottom: 1.2rem; }
+.research-programme > p:not(.research-question) { max-width: 78ch; }
+.research-work-list { margin-top: 1.8rem; border-top: 1px solid $line; }
+.research-work { padding: 1rem 0 1.1rem; border-bottom: 1px solid $line; font-size: .9rem; color: $body; }
+.research-work strong { font-family: $serif; font-weight: 500; color: $ink; }
+.research-work .work-question { margin-top: .3rem; margin-bottom: .2rem; color: #55616c; max-width: 78ch; }
+.research-work a { font-size: .78rem; margin-right: .7rem; }
+
+.hero-copy > p + p { margin-top: 1.25rem; }
+@media (max-width: 900px) {
+  .research-programme { padding: 2.5rem 0 2.8rem; }
+}
+
+/* --- v7 research filters --- */
+.research-programmes > .section-intro { max-width: 74ch; margin-bottom: .25rem; }
+.research-work-list .research-work[hidden] { display: none !important; }
+
+/* --- v7 research work labels --- */
+.work-kicker {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .71rem;
+  font-weight: 600;
+  color: $muted;
+  margin-top: 1.8rem;
+  margin-bottom: .55rem;
+}
+.research-programme:first-of-type .work-kicker { margin-top: 1.6rem; }

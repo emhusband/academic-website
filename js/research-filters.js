@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setFilter(valid, container, items);
   }
 
-  setupFilters('research-filter-controls', '.research-theme', 'topic');
+  setupFilters('research-filter-controls', '.research-work', 'topic');
   setupFilters('pub-filter-controls', '#pub-list .pub', 'topic');
 });
