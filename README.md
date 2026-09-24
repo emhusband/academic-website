@@ -1,27 +1,21 @@
-# E. Matthew Husband — Quarto website prototype
+# E. Matthew Husband — full beta
 
-Scientific-minimal academic website prototype for GitHub Pages.
+Quarto + GitHub Pages website prototype.
 
-## Local preview
+## Top-level navigation
+Home · Research · Publications · People · CV
 
-Install [Quarto](https://quarto.org/) and run:
+Teaching is intentionally omitted from the top-level site.
 
-```bash
-quarto preview
-```
+## Data
+- `publications.bib` is the editable working bibliography and now includes the citable proceedings and other scholarly outputs represented on the current site.
+- `publication-metadata.yml` holds website-specific topic labels and current-work placeholders.
 
-## Render
+## Publishing
+`.github/workflows/publish.yml` uses the GitHub Pages artifact deployment workflow. Push to `main` and GitHub Actions will render and deploy the site.
 
-```bash
-quarto render
-```
-
-The rendered site is written to `_site/`.
-
-## Publish
-
-The repository is configured for GitHub Pages using GitHub Actions. The workflow lives at `.github/workflows/publish.yml`.
-
-## Design direction
-
-The site uses a wide, restrained academic layout with serif headings, a minimal sans-serif interface, institutional affiliations in the footer, and a slowly evolving SVG research network. The network is functional as well as conceptual: its three labelled regions link to research filters for Representation, Construction & Inference, and Memory & Knowledge.
+## Remaining placeholders
+- `images/profile-placeholder.svg` should eventually be replaced with the preferred photograph.
+- `files/matthew-husband-cv.pdf` should be added for the CV link.
+- Some publication links can be enriched later with PDFs, DOIs, data, and materials.
+- People and bibliography details should be reviewed once more before the public launch.

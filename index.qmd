@@ -51,7 +51,7 @@ title: ""
 <div>
 <div class="section-kicker">Research at a glance</div>
 
-## How does the mind represent and use meaning?
+## Meaning, cognition, and language
 </div>
 
 <a class="section-action" href="research/index.html">Explore the research <span aria-hidden="true">→</span></a>

@@ -1,0 +1,29 @@
+tag_labels:
+  event-structure: Event structure
+  genericity-kinds: Genericity & kinds
+  composition-enrichment: Composition & enrichment
+  prediction-expectation: Prediction & expectation
+  probability-inference: Probability & inference
+  alternatives-implicature: Alternatives & implicature
+  coherence: Coherence
+  memory-retrieval: Memory & retrieval
+  structure-reanalysis: Structure & reanalysis
+current_work:
+  - key: zhang-husband-additivity-2024
+    title: Unpacking additivity biases reveal the class of sampling algorithm for word predictability
+    authors: Zhang, Y. & Husband, E. M.
+    year: 2024
+    venue: 37th Annual Conference on Human Sentence Processing
+    tags: [prediction-expectation, probability-inference]
+  - key: fan-husband-garden-path-2025
+    title: Illicit syntactic representations in garden-path reanalysis: More evidence from reflexives
+    authors: Fan, Y. & Husband, E. M.
+    year: 2025
+    venue: 38th Annual Conference on Human Sentence Processing
+    tags: [memory-retrieval, structure-reanalysis]
+  - key: husband-functional-2015
+    title: The inventory of functional categories and conditions on the possibility of experience
+    authors: Husband, E. M.
+    year: 2015
+    venue: Handout
+    tags: [genericity-kinds, composition-enrichment]
