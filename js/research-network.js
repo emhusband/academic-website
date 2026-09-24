@@ -15,19 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
       region: 'blue',
       title: 'Representation',
       subtitle: 'What is the format and structure of meaning?',
-      href: 'research/index.html?topic=representation#explore'
+      href: 'research/index.html#grammatical-structure'
     },
     {
       region: 'green',
       title: 'Construction & Inference',
       subtitle: 'How is meaning built, enriched, and used?',
-      href: 'research/index.html?topic=inference#explore'
+      href: 'research/index.html#expectation-inference'
     },
     {
       region: 'amber',
       title: 'Memory & Knowledge',
       subtitle: 'How is meaning encoded, organized, and retrieved?',
-      href: 'research/index.html?topic=memory#explore'
+      href: 'research/index.html#meaning-memory'
     }
   ];
 
