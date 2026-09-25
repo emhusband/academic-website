@@ -78,6 +78,7 @@ title: ""
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/thematic-separation.png" alt="Conceptual illustration for Thematic separation: thematic relations represented separately around an event."></div>
 
+::: {.selected-copy}
 **Thematic separation in light of sentence comprehension**  
 Husband, E. M. · *Language and Linguistic Compass* · 2023
 
@@ -86,18 +87,24 @@ What does the grammatical representation of thematic relations commit us to abou
 [DOI](https://doi.org/10.1111/lnc3.12496)
 :::
 
+:::
+
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/kinds.png" alt="Conceptual illustration for Nothing much for kinds: a kind representation nested within an object representation."></div>
 
+::: {.selected-copy}
 **Nothing much for kinds**  
 Husband, E. M. · *For Hagit: A celebration* · 2022
 
 How is the kind/object distinction shaped by grammatical representation?
 :::
 
+:::
+
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/prediction-probability.png" alt="Conceptual illustration for word prediction and probability judgment: a probability representation branching to offline judgments and incremental word predictions."></div>
 
+::: {.selected-copy}
 **Relating word prediction and probability judgment: Online and offline probabilistic processes are partially shared**  
 Zhang, Y. & Husband, E. M. · *Proceedings of the Cognitive Science Society* · 2026
 
@@ -106,9 +113,12 @@ Do our explicit judgments about what is probable and our moment-to-moment expect
 [Paper](https://escholarship.org/uc/item/113553v6)
 :::
 
+:::
+
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/scalar-alternatives.png" alt="Conceptual illustration for scalar alternatives: an implicit alternative generated from some and tested across memory intervals."></div>
 
+::: {.selected-copy}
 **The impact of implicit scalar alternatives on the products of language comprehension: Evidence from recognition memory**  
 Patson, N. & Husband, E. M. · *Memory & Cognition* · 2026
 
@@ -117,9 +127,12 @@ When comprehension makes implicit alternatives available, do those alternatives 
 [DOI](https://doi.org/10.3758/s13421-026-01856-8)
 :::
 
+:::
+
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/incremental-qud.png" alt="Conceptual illustration for incremental QUDs: causal expectations constrained by discourse embedding."></div>
 
+::: {.selected-copy}
 **An incremental QUD approach to causal discourse expectations**  
 Yao, R., Altshuler, D. & Husband, E. M. · *Acta Psychologica* · 2026
 
@@ -128,15 +141,20 @@ Can comprehenders' expectations about what comes next be explained by the questi
 [DOI](https://doi.org/10.1016/j.actpsy.2026.107670)
 :::
 
+:::
+
 ::: {.selected-item}
 <div class="selected-visual"><img class="selected-graphic" src="images/selected-work/speaking-of-death.png" alt="Conceptual illustration for Speaking of death: event structure connecting alive and dead states with manner and result representations."></div>
 
+::: {.selected-copy}
 **Speaking of death**  
 Husband, E. M. · *Philosophical Transactions of the Royal Society B: Biological Sciences* · 2018
 
 What does the way events are grammatically encoded tell us about how events themselves are represented in the mind?
 
 [DOI](https://doi.org/10.1098/rstb.2018.0172)
+:::
+
 :::
 
 </div>

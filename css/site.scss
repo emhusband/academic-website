@@ -1010,3 +1010,49 @@ $reading-measure: 120ch;
 .selected-work-section .selected-item > :not(.selected-visual):first-of-type {
   grid-row: 1;
 }
+
+/* --- selected-work v16 layout --- */
+/* Keep the citation column on its established text edge and place the thumbnail
+   in a dedicated column to its left. An explicit copy wrapper avoids Quarto's
+   paragraph-level grid auto-placement. */
+.selected-work-section .selected-item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  column-gap: 2rem;
+  align-items: start;
+}
+
+.selected-work-section .selected-visual {
+  grid-column: 1;
+  grid-row: 1;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+}
+
+.selected-work-section .selected-copy {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  align-self: start;
+}
+
+.selected-work-section .selected-copy > :first-child {
+  margin-top: 0;
+}
+
+.selected-work-section .selected-copy > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .selected-work-section .selected-item {
+    grid-template-columns: 1fr;
+    row-gap: .75rem;
+  }
+  .selected-work-section .selected-visual,
+  .selected-work-section .selected-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
