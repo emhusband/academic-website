@@ -1186,3 +1186,50 @@ $reading-measure: 120ch;
 @media (prefers-reduced-motion: reduce) {
   .pv-symbol,.pv-stage,.pv-word,.pv-dist,.pv-alt,.pv-coherence,.pv-memory,.pv-retrieve { transition: none !important; }
 }
+
+/* --- research programme animation polish --- */
+.programme-svg { overflow: visible; }
+.pv-grammar-line { stroke: rgba(115, 139, 160, .55); stroke-width: 1.15; fill: none; }
+.pv-moving { transform-box: view-box; transform-origin: center; transition: opacity 1s ease, transform 1.35s cubic-bezier(.22,.7,.2,1); }
+.pv-P { transform: translate(65px,-40px); }
+.pv-x { transform: translate(-45px,-35px); }
+.pv-ex { transform: translate(110px,25px); }
+.pv-P.placed,.pv-x.placed,.pv-ex.placed { transform: translate(0,0); }
+.pv-stage { transition: opacity 1.2s ease; }
+
+.pv-axis { stroke: rgba(174,188,200,.55); stroke-width: .9; }
+.pv-dist { transition: opacity 1.15s ease; }
+.pv-dist-fill { fill: rgba(121,198,193,.24); }
+.pv-dist-edge { stroke: rgba(97,164,163,.34); stroke-width: .8; }
+.pv-word { transition: opacity 1.05s ease; }
+
+.pv-alt { transition: opacity 1.1s ease; }
+.pv-alt.soft { opacity: .14 !important; }
+.pv-drift.on { animation: pv-drift-a 6.8s ease-in-out infinite alternate; }
+.pv-drift-1.on { animation-name: pv-drift-b; animation-duration: 7.6s; }
+.pv-drift-2.on { animation-name: pv-drift-c; animation-duration: 8.1s; }
+.pv-drift-3.on { animation-name: pv-drift-d; animation-duration: 7.2s; }
+@keyframes pv-drift-a { from{transform:translate(-2px,1px)} to{transform:translate(3px,-2px)} }
+@keyframes pv-drift-b { from{transform:translate(1px,-2px)} to{transform:translate(-3px,2px)} }
+@keyframes pv-drift-c { from{transform:translate(-1px,-1px)} to{transform:translate(2px,3px)} }
+@keyframes pv-drift-d { from{transform:translate(2px,1px)} to{transform:translate(-2px,-3px)} }
+.pv-coherence { stroke-dasharray: 4 5; stroke-dashoffset: 80; opacity: 0; transition: opacity .9s ease, stroke-dashoffset 1.3s ease; }
+.pv-coherence.on { opacity: .72; stroke-dashoffset: 0; }
+
+.pv-memory { opacity: 0; transition: opacity 1.2s ease; }
+.pv-memory.seen { opacity: 1; }
+.pv-memory-old.decayed { opacity: .18; transition: opacity 1.8s ease; }
+.pv-memory-current.seen { opacity: 1; }
+.pv-memory-node,.pv-feature,.pv-memory-line { transition: opacity .9s ease, fill .9s ease, stroke .9s ease; }
+.pv-memory-old.decayed .pv-memory-node:nth-of-type(2),
+.pv-memory-old.decayed .pv-memory-node:nth-of-type(4) { opacity: .35; }
+.pv-feature.react,.pv-memory-node.react { fill: $teal; opacity: 1 !important; }
+.pv-feature.resolved { fill: $teal; }
+.pv-retrieve-wipe { stroke-dasharray: 320; stroke-dashoffset: 320; opacity: 0; transition: opacity .25s ease, stroke-dashoffset 1.35s cubic-bezier(.3,.7,.25,1); }
+.pv-retrieve-wipe.on { opacity: .78; stroke-dashoffset: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-moving { transition: none !important; transform: none !important; }
+  .pv-drift.on { animation: none !important; }
+  .pv-retrieve-wipe { transition: none !important; stroke-dashoffset: 0; }
+}
