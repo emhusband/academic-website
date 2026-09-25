@@ -26,9 +26,14 @@ title: "Research"
 <h2>Grammatical structure and the representation of meaning</h2>
 <p class="research-question">Which aspects of meaning are grammatically structured, and what does that structure tell us about mental representation?</p>
 
+<div class="programme-intro">
+<div class="programme-copy">
 <p>Some dimensions of meaning are remarkably sensitive to grammatical structure. Distinctions involving events and states, thematic relations, individuation, kinds, quantity, and modality are not simply matters of what words and phrases mean: grammatical structure shapes how these meanings are represented and composed. Much of my theoretical work asks why these particular dimensions of meaning are grammatically privileged, and what their grammatical organization can tell us about the representations available to the mind.</p>
 
 <p>A theory of linguistic representation is also a commitment about what the comprehension system has to construct and manipulate. Representational distinctions motivated by linguistic theory should have consequences for the processes that construct and use interpretations; evidence about those processes can, in turn, constrain the representations that linguistic theories posit. This interaction between representation and process is central to my approach to grammatically relevant aspects of sentence interpretation.</p>
+</div>
+<div class="programme-visual" data-visual="grammatical-structure" aria-hidden="true"></div>
+</div>
 
 <div class="work-kicker">Selected work</div>
 <div class="research-work-list">
@@ -67,9 +72,14 @@ title: "Research"
 <h2>Expectation and inference</h2>
 <p class="research-question">How does our knowledge guide our expectations about language before the relevant input arrives?</p>
 
+<div class="programme-intro">
+<div class="programme-copy">
 <p>Language comprehension unfolds over time, but comprehenders do not simply wait for each word before interpreting it. Our knowledge of language, context, and the world allows us to form expectations about how upcoming language is likely to proceed. These expectations provide a window onto the knowledge that supports comprehension: what kinds of information can guide prediction, how uncertainty is represented, and how expectations at different levels of linguistic representation relate to one another.</p>
 
 <p>My work approaches these questions by treating prediction as a problem of probabilistic inference while asking what cognitively plausible algorithms could actually implement those inferences. Rather than simply demonstrating whether comprehenders predict, I ask how probabilistic knowledge is represented and how cognitive processes make use of that knowledge during real-time comprehension. This provides a way to investigate how stored knowledge, contextual information, and online inference jointly shape the interpretation of language as it unfolds.</p>
+</div>
+<div class="programme-visual" data-visual="expectation-inference" aria-hidden="true"></div>
+</div>
 
 <div class="work-kicker">Selected work</div>
 <div class="research-work-list">
@@ -104,9 +114,14 @@ title: "Research"
 <h2>Alternatives, coherence, and implicit meaning</h2>
 <p class="research-question">How does comprehension construct meaning that goes beyond what is explicitly encoded?</p>
 
+<div class="programme-intro">
+<div class="programme-copy">
 <p>Understanding an utterance routinely involves more than composing the meanings explicitly provided by its words and grammatical structure. Speakers make meanings and their alternatives available, and comprehenders consequently draw inferences, establish relations of coherence, and enrich interpretations in response to context. The question is how these less rigidly encoded aspects of meaning are represented and constrained: what licenses an implicit interpretation, what alternatives are considered, and how an evolving context shapes the relations comprehenders establish among meanings.</p>
 
 <p>My work approaches these questions by investigating how comprehenders generate, maintain, and use information that is not straightforwardly given by the linguistic signal. Alternatives, implicatures, and coherence relations provide different cases in which interpretation depends on information beyond what is explicitly encoded. Studying them together offers a way to ask how flexible, context-sensitive inference interacts with the more structured representations supplied by language.</p>
+</div>
+<div class="programme-visual" data-visual="alternatives-coherence" aria-hidden="true"></div>
+</div>
 
 <div class="work-kicker">Selected work</div>
 <div class="research-work-list">
@@ -144,9 +159,14 @@ title: "Research"
 <h2>Meaning in memory</h2>
 <p class="research-question">What is the relationship between the processes that build an interpretation and the representational product they ultimately leave behind?</p>
 
+<div class="programme-intro">
+<div class="programme-copy">
 <p>The incremental nature of language comprehension means that linguistic interpretations are continuously constructed and revised as linguistic input unfolds. But the representations that form during comprehension and persist afterwards need not simply correspond to the final linguistic analysis. Earlier interpretations can linger after reanalysis, representations can be interfered with during encoding and retrieval, implicitly constructed information can become part of what is remembered, and prior knowledge can shape the representations that comprehenders construct. I am interested in what these effects reveal about the relationship between the moment-to-moment processes of comprehension and their representational products.</p>
 
 <p>My work investigates both how information in memory is retrieved and used during comprehension, and how the processes involved in comprehension determine what is ultimately encoded and retained. This makes memory more than a resource that language processing draws upon: it provides a way to investigate how the history of processing shapes an interpretation, what aspects of that interpretation persist, and how the resulting representations become available for subsequent interpretation and inference.</p>
+</div>
+<div class="programme-visual" data-visual="meaning-memory" aria-hidden="true"></div>
+</div>
 
 <div class="work-kicker">Selected work</div>
 <div class="research-work-list">
@@ -172,3 +192,6 @@ title: "Research"
 </section>
 
 </section>
+
+
+<script src="../js/research-programmes.js"></script>

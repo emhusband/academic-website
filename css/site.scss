@@ -1129,3 +1129,60 @@ $reading-measure: 120ch;
     margin: 0 !important;
   }
 }
+
+/* --- research programme visualizations --- */
+.programme-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(330px, 2fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+  margin-top: 1.1rem;
+}
+.programme-copy > p { max-width: none; }
+.programme-copy > p:first-child { margin-top: 0; }
+.programme-visual {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 13 / 9;
+  align-self: center;
+}
+.programme-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.pv-line,.pv-axis,.pv-solid-soft,.pv-memory-line { stroke: #d8e0e7; stroke-width: 1.4; fill: none; }
+.pv-solid-soft { stroke: #9eb6ca; stroke-width: 1.15; opacity: .72; }
+.pv-label,.pv-symbol,.pv-word,.pv-feature { font-family: $serif; fill: $ink; }
+.pv-symbol { font-size: 30px; font-style: italic; opacity: 0; transition: opacity .8s ease; }
+.pv-symbol.on { opacity: 1; }
+.pv-teal { fill: $teal; }
+.pv-stage { opacity: 0; transition: opacity 1s ease; }
+.pv-stage.on { opacity: 1; }
+.pv-word { font-size: 25px; font-style: italic; opacity: 0; transition: opacity .8s ease; }
+.pv-word.on { opacity: 1; }
+.pv-dist { opacity: 0; transition: opacity .85s ease; }
+.pv-dist.on { opacity: 1; }
+.pv-dist-fill { fill: rgba(121, 198, 193, .34); }
+.pv-dist-edge { fill: none; stroke: rgba(97, 164, 163, .48); stroke-width: 1; }
+.pv-alt { opacity: 0; transition: opacity .8s ease; }
+.pv-alt.on { opacity: 1; }
+.pv-node { fill: rgba(117, 158, 192, .22); stroke: rgba(80, 123, 158, .28); stroke-width: .8; }
+.pv-teal-node { fill: rgba(73, 186, 179, .28); stroke: rgba(37, 151, 147, .32); }
+.pv-coherence { stroke: $teal; stroke-width: 1.45; stroke-dasharray: 4 5; opacity: 0; transition: opacity .8s ease; }
+.pv-coherence.on { opacity: .8; }
+.pv-memory { opacity: 0; transition: opacity .9s ease; }
+.pv-memory.seen { opacity: .22; }
+.pv-memory.current.seen { opacity: 1; }
+.pv-memory.react { opacity: .48; }
+.pv-memory-line { stroke: #91aec4; stroke-width: 1.05; }
+.pv-memory-node { fill: rgba(114, 169, 201, .22); stroke: rgba(80, 123, 158, .3); stroke-width: .8; }
+.pv-feature { font-size: 14px; font-style: italic; text-anchor: middle; }
+.pv-feature.react,.pv-memory-node.react { fill: $teal; opacity: 1; }
+.pv-retrieve { fill: none; stroke: $teal; stroke-width: 1.35; stroke-dasharray: 4 5; opacity: 0; transition: opacity .9s ease; }
+.pv-retrieve.on { opacity: .82; }
+.research-programme .work-kicker { margin-top: 2.25rem; }
+
+@media (max-width: 900px) {
+  .programme-intro { grid-template-columns: 1fr; gap: 1.1rem; }
+  .programme-visual { width: min(100%, 560px); margin: .25rem auto .4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pv-symbol,.pv-stage,.pv-word,.pv-dist,.pv-alt,.pv-coherence,.pv-memory,.pv-retrieve { transition: none !important; }
+}
