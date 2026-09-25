@@ -1233,3 +1233,73 @@ $reading-measure: 120ch;
   .pv-drift.on { animation: none !important; }
   .pv-retrieve-wipe { transition: none !important; stroke-dashoffset: 0; }
 }
+
+/* --- research programme animation v22: quiet, continuous motion --- */
+.pv-symbol,
+.pv-word,
+.pv-stage,
+.pv-dist,
+.pv-alt,
+.pv-memory,
+.pv-retrieve,
+.pv-coherence {
+  will-change: opacity, transform;
+}
+
+/* Structure: fixed grammatical geometry; semantic material settles into it. */
+.pv-grammar-line { stroke: rgba(115,139,160,.46); stroke-width: 1.05; }
+.pv-stage { opacity: 0; transform: scale(.975); transform-origin: center; transition: opacity 2.2s ease, transform 2.4s ease; }
+.pv-stage.on { opacity: 1; transform: scale(1); }
+.pv-symbol { opacity: 0; transition: opacity 2s ease, transform 3.1s cubic-bezier(.25,.65,.25,1); }
+.pv-symbol.on { opacity: .9; }
+.pv-moving { transform-box: view-box; transform-origin: center; }
+.pv-P { transform: translate(-14px,10px); }
+.pv-x { transform: translate(14px,9px); }
+.pv-ex { transform: translate(-13px,-9px); }
+.pv-P.placed,.pv-x.placed,.pv-ex.placed { transform: translate(0,0); }
+.pv-symbol.on:not(.placed) { animation: pv-symbol-float 6.5s ease-in-out infinite alternate; }
+.pv-symbol.settled { animation: pv-symbol-breathe 7.5s ease-in-out infinite alternate; }
+@keyframes pv-symbol-float { from{opacity:.72} to{opacity:.92} }
+@keyframes pv-symbol-breathe { from{opacity:.86} to{opacity:1} }
+
+/* Expectation: probability mass breathes rather than pops. */
+.pv-axis { stroke: rgba(174,188,200,.46); stroke-width: .85; }
+.pv-word { transition: opacity 2s ease; }
+.pv-dist { opacity: 0; transform: scale(.97); transform-origin: center bottom; transition: opacity 2.1s ease, transform 2.4s ease; }
+.pv-dist.on { opacity: 1; transform: scale(1); }
+.pv-dist-fill { fill: rgba(121,198,193,.21); }
+.pv-dist-edge { stroke: rgba(97,164,163,.28); stroke-width: .72; }
+.pv-dist.on.pv-breathe { animation: pv-probability-breathe 6.8s ease-in-out infinite alternate; }
+.pv-breathe-1.on { animation-duration: 7.6s; }
+.pv-breathe-2.on { animation-duration: 8.2s; }
+@keyframes pv-probability-breathe { from{opacity:.82;transform:scale(.985)} to{opacity:1;transform:scale(1.015)} }
+
+/* Alternatives: slow constellation-like emergence and drift. */
+.pv-alt { opacity: 0; transform: scale(.94); transform-origin: center; transition: opacity 2.1s ease, transform 2.4s ease; }
+.pv-alt.on { opacity: 1; transform: scale(1); }
+.pv-alt.soft { opacity: .12 !important; transform: scale(.96); }
+.pv-drift.on { animation: pv-drift-a 12s ease-in-out infinite alternate; }
+.pv-drift-1.on { animation-name: pv-drift-b; animation-duration: 13.5s; }
+.pv-drift-2.on { animation-name: pv-drift-c; animation-duration: 14.5s; }
+.pv-drift-3.on { animation-name: pv-drift-d; animation-duration: 12.8s; }
+@keyframes pv-drift-a { from{translate:-1px 1px} to{translate:3px -2px} }
+@keyframes pv-drift-b { from{translate:1px -2px} to{translate:-3px 2px} }
+@keyframes pv-drift-c { from{translate:-1px -1px} to{translate:2px 3px} }
+@keyframes pv-drift-d { from{translate:2px 1px} to{translate:-2px -3px} }
+.pv-coherence { stroke-dasharray:4 5; stroke-dashoffset:90; opacity:0; transition:opacity 1.8s ease,stroke-dashoffset 2.6s cubic-bezier(.3,.65,.25,1); }
+.pv-coherence.on { opacity:.68; stroke-dashoffset:0; }
+
+/* Memory: two quiet feature structures, decay, then right-to-left retrieval. */
+.pv-memory { opacity:0; transform:scale(.97); transform-origin:center; transition:opacity 2.4s ease,transform 2.6s ease; }
+.pv-memory.seen { opacity:1; transform:scale(1); }
+.pv-memory-old.decayed { opacity:.16; transform:scale(.985); transition:opacity 3s ease,transform 3s ease; }
+.pv-memory-node,.pv-feature,.pv-memory-line { transition:opacity 2s ease,fill 2s ease,stroke 2s ease; }
+.pv-feature.react,.pv-memory-node.react { fill:$teal; opacity:1 !important; }
+.pv-feature.resolved { fill:$teal; }
+.pv-retrieve-wipe { stroke-dasharray:340; stroke-dashoffset:340; opacity:0; transition:opacity 1.5s ease,stroke-dashoffset 3.4s cubic-bezier(.35,.65,.25,1); }
+.pv-retrieve-wipe.on { opacity:.68; stroke-dashoffset:0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-symbol.on,.pv-dist.on,.pv-alt.on,.pv-memory.seen { animation:none !important; }
+  .pv-stage,.pv-symbol,.pv-word,.pv-dist,.pv-alt,.pv-memory,.pv-retrieve,.pv-coherence { transition:none !important; }
+}
