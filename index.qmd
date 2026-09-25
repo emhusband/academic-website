@@ -2,9 +2,9 @@
 title: ""
 ---
 
-<section class="hero">
+<section class="me">
 
-::: {.hero-copy}
+::: {.me-copy}
 
 <div class="eyebrow">Professor of Psycholinguistics · University of Oxford</div>
 
@@ -16,13 +16,13 @@ title: ""
 
 :::
 
-::: {.hero-side}
+::: {.me-side}
 
 ::: {.profile-frame}
 <div class="profile-photo"><img src="images/profile.jpg" alt="E. Matthew Husband"></div>
 :::
 
-<div class="hero-side-links" aria-label="Professional links">
+<div class="me-side-links" aria-label="Professional links">
   <a href="mailto:matthew.husband@ling-phil.ox.ac.uk" aria-label="Email">
     <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
     <span>Email</span>

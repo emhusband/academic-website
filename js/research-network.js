@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const labels = [
     {
       region: 'blue',
-      title: 'Representation',
+      title: 'Representation & Structure',
       subtitle: 'What is the format and structure of meaning?',
       href: 'research/index.html#grammatical-structure'
     },

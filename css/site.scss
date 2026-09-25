@@ -57,7 +57,7 @@ p { max-width: 72ch; }
 a { color: $blue; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: $blue-dark; }
 
-.hero {
+.me {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 4.2rem;
@@ -65,7 +65,7 @@ a:hover { color: $blue-dark; }
   padding: 4.3rem 0 3.8rem;
   border-bottom: 1px solid $line;
 }
-.hero-copy { align-self: center; }
+.me-copy { align-self: center; }
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: .15em;
@@ -74,17 +74,17 @@ a:hover { color: $blue-dark; }
   color: $muted;
   margin-bottom: 1.4rem;
 }
-.hero-copy h1 { max-width: 10em; margin-bottom: 1.25rem; }
-.hero-copy > p {
+.me-copy h1 { max-width: 10em; margin-bottom: 1.25rem; }
+.me-copy > p {
   font-family: $serif;
   font-size: 1.25rem;
   line-height: 1.53;
   color: #344252;
 }
-.hero-copy > p + p { font-size: 1.08rem; }
-.hero-links { margin-top: 1.55rem; font-size: .9rem; letter-spacing: .025em; }
-.hero-links a { margin-right: 1rem; }
-.hero-side { align-self: start; }
+.me-copy > p + p { font-size: 1.08rem; }
+.me-links { margin-top: 1.55rem; font-size: .9rem; letter-spacing: .025em; }
+.me-links a { margin-right: 1rem; }
+.me-side { align-self: start; }
 .profile-frame { display: block; }
 .profile-photo {
   aspect-ratio: 4 / 4.7;
@@ -196,8 +196,8 @@ a:hover { color: $blue-dark; }
 .callout { border-left: 3px solid $blue; padding: 1rem 1.25rem; background: $soft; margin: 1.5rem 0; }
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 2.2rem; padding-top: 3rem; }
-  .hero-side { max-width: 28rem; }
+  .me { grid-template-columns: 1fr; gap: 2.2rem; padding-top: 3rem; }
+  .me-side { max-width: 28rem; }
   .concept-map { grid-template-columns: 1fr; }
   .concept { padding-right: 0; margin-right: 0; }
   .concept + .concept { border-left: 0; border-top: 1px solid $line; padding-left: 0; }
@@ -208,7 +208,7 @@ a:hover { color: $blue-dark; }
 
 @media (max-width: 620px) {
   h1 { font-size: 2.7rem; }
-  .hero-copy > p { font-size: 1.16rem; }
+  .me-copy > p { font-size: 1.16rem; }
   .institution-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .section-head { align-items: flex-start; flex-direction: column; }
 }
@@ -239,17 +239,17 @@ main.content {
   margin-right: auto;
 }
 
-.hero {
+.me {
   grid-template-columns: 1.15fr .85fr;
   gap: 4.8rem;
   padding-top: 4.7rem;
   padding-bottom: 4.2rem;
 }
 
-.hero-copy h1 { max-width: 13em; }
-.hero-affiliation { margin-top: 1.55rem; color: $muted; font-size: .82rem; line-height: 1.55; }
-.hero-side-links { display: flex; gap: .9rem 1.2rem; flex-wrap: wrap; margin-top: .9rem; font-size: .84rem; }
-.hero-side-links a { text-decoration: none; }
+.me-copy h1 { max-width: 13em; }
+.me-affiliation { margin-top: 1.55rem; color: $muted; font-size: .82rem; line-height: 1.55; }
+.me-side-links { display: flex; gap: .9rem 1.2rem; flex-wrap: wrap; margin-top: .9rem; font-size: .84rem; }
+.me-side-links a { text-decoration: none; }
 
 .research-glance { padding-bottom: 3.2rem; }
 .research-glance .section-head { margin-bottom: 1.2rem; }
@@ -327,15 +327,15 @@ main.content {
 @media (max-width: 900px) {
   main.content { width: min(100% - 2.5rem, 1380px) !important; }
   .navbar .container-fluid { width: calc(100% - 2.5rem); }
-  .hero { gap: 2.2rem; }
+  .me { gap: 2.2rem; }
   #research-network-svg { min-width: 900px; min-height: 420px; }
   .network-wrap { overflow-x: auto; }
   .network-labels { min-width: 900px; }
 }
 
 @media (max-width: 620px) {
-  .hero { padding-top: 3.15rem; }
-  .hero-affiliation { font-size: .78rem; }
+  .me { padding-top: 3.15rem; }
+  .me-affiliation { font-size: .78rem; }
   #research-network-svg { min-width: 840px; }
   .network-labels { min-width: 840px; }
   .network-title { font-size: 1.25rem; }
@@ -347,14 +347,14 @@ main.content {
 }
 
 /* --- layout refinements --- */
-.hero {
+.me {
   grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr);
   gap: 4.5rem;
 }
 
-.hero-affiliation { display: none; }
+.me-affiliation { display: none; }
 
-.hero-side {
+.me-side {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -369,7 +369,7 @@ main.content {
   aspect-ratio: 4 / 4.7;
 }
 
-.hero-side-links {
+.me-side-links {
   width: min(100%, 310px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -378,7 +378,7 @@ main.content {
   font-size: .78rem;
 }
 
-.hero-side-links a {
+.me-side-links a {
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -391,7 +391,7 @@ main.content {
   line-height: 1.2;
 }
 
-.hero-side-links a:hover { color: $blue; }
+.me-side-links a:hover { color: $blue; }
 
 .link-icon {
   width: 1.25rem;
@@ -400,7 +400,7 @@ main.content {
   flex: 0 0 auto;
 }
 
-.hero .eyebrow {
+.me .eyebrow {
   max-width: 34rem;
 }
 
@@ -477,17 +477,17 @@ main.content {
 }
 
 @media (max-width: 900px) {
-  .hero {
+  .me {
     grid-template-columns: 1fr;
     gap: 2.2rem;
   }
 
-  .hero-side {
+  .me-side {
     align-items: flex-start;
   }
 
   .profile-frame,
-  .hero-side-links {
+  .me-side-links {
     width: min(100%, 310px);
   }
 
@@ -511,7 +511,7 @@ main.content {
 }
 
 @media (max-width: 620px) {
-  .hero-side-links {
+  .me-side-links {
     width: 100%;
     max-width: 310px;
   }
@@ -519,26 +519,26 @@ main.content {
 
 /* --- layout refinements --- */
 @media (min-width: 901px) {
-  .hero {
+  .me {
     grid-template-columns: minmax(0, 1.02fr) minmax(260px, .78fr);
     gap: 2.6rem;
   }
 
-  .hero-side {
+  .me-side {
     align-items: center;
   }
 
   .profile-frame,
-  .hero-side-links {
+  .me-side-links {
     width: min(100%, 290px);
   }
 
-  .hero-side-links {
+  .me-side-links {
     grid-template-columns: repeat(4, 1fr);
     column-gap: .35rem;
   }
 
-  .hero-copy {
+  .me-copy {
     padding-right: 0;
   }
 }
@@ -577,35 +577,35 @@ main.content {
 
 /* --- layout refinements --- */
 @media (min-width: 901px) {
-  .hero {
+  .me {
     grid-template-columns: minmax(0, 1.16fr) minmax(270px, .64fr);
     gap: 2.25rem;
   }
 
   .profile-frame,
-  .hero-side-links {
+  .me-side-links {
     width: min(100%, 270px);
   }
 
-  .hero-side-links {
+  .me-side-links {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: .2rem;
     margin-top: .65rem;
   }
 
-  .hero-side-links a {
+  .me-side-links a {
     flex-direction: column;
     gap: .22rem;
   }
 
-  .hero-side-links .link-icon {
+  .me-side-links .link-icon {
     width: 1.1rem;
     height: 1.1rem;
   }
 }
 
-/* Full-width content after the hero, with actions aligned to section titles. */
+/* Full-width content after the me, with actions aligned to section titles. */
 .research-glance .section-head,
 .selected-work-section .section-head,
 .prospective-home .section-head {
@@ -637,17 +637,17 @@ main.content {
 }
 
 @media (max-width: 900px) {
-  .hero {
+  .me {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   .profile-frame,
-  .hero-side-links {
+  .me-side-links {
     width: min(100%, 270px);
   }
 
-  .hero-side-links {
+  .me-side-links {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: .25rem;
   }
@@ -666,7 +666,7 @@ main.content {
 .research-work .work-question { margin-top: .3rem; margin-bottom: .2rem; color: #55616c; max-width: 78ch; }
 .research-work a { font-size: .78rem; margin-right: .7rem; }
 
-.hero-copy > p + p { margin-top: 1.25rem; }
+.me-copy > p + p { margin-top: 1.25rem; }
 @media (max-width: 900px) {
   .research-programme { padding: 2.5rem 0 2.8rem; }
 }
@@ -830,7 +830,7 @@ main.content {
 /* --- layout refinements --- */
 p { max-width: 120ch; }
 .section-copy, .section-intro, .research-intro, .prospective-wide { max-width: 120ch; }
-.hero-copy > p { max-width: none; }
+.me-copy > p { max-width: none; }
 
 @media (max-width: 900px) {
   p { max-width: 100%; }
@@ -871,4 +871,31 @@ p { max-width: 120ch; }
 @media (max-width: 800px) {
   .person-entry { grid-template-columns: 1fr; gap: .2rem; }
   .person-project { margin-top: .15rem; }
+}
+
+/* --- cross-page measure consistency --- */
+/* Use one readable measure for prose and research-item text throughout the site. */
+$reading-measure: 120ch;
+
+.prospective-wide,
+.prospective-wide p,
+.prospective-section > p,
+.section-copy,
+.section-intro,
+.research-intro,
+.page-title > p,
+.research-programme > p:not(.research-question),
+.research-question,
+.research-work .work-question,
+.selected-work-section .selected-item p,
+.pub-title {
+  max-width: $reading-measure;
+}
+
+/* The homepage photograph uses the full portrait rather than a headshot crop. */
+.profile-photo {
+  aspect-ratio: 3 / 4;
+}
+.profile-photo img {
+  object-position: center center;
 }
