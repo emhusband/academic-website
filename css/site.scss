@@ -944,3 +944,54 @@ $reading-measure: 120ch;
     margin-bottom: .35rem;
   }
 }
+
+/* --- selected-work illustration sizing fix --- */
+/* Quarto may wrap Markdown images in paragraphs; the explicit visual wrapper keeps
+   the thumbnail as the first grid column and prevents responsive image rules from
+   expanding it to the full content width. */
+.selected-work-section .selected-item {
+  grid-template-columns: 150px minmax(0, 1fr);
+  column-gap: 1.45rem;
+}
+
+.selected-work-section .selected-visual {
+  grid-column: 1;
+  grid-row: 1 / span 12;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+}
+
+.selected-work-section .selected-visual .selected-graphic {
+  width: 150px !important;
+  height: 150px !important;
+  max-width: 150px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border: 1px solid $line;
+  margin: 0;
+}
+
+.selected-work-section .selected-item > :not(.selected-visual) {
+  grid-column: 2;
+}
+
+@media (max-width: 700px) {
+  .selected-work-section .selected-item {
+    grid-template-columns: 1fr;
+    row-gap: .65rem;
+  }
+
+  .selected-work-section .selected-visual,
+  .selected-work-section .selected-item > :not(.selected-visual) {
+    grid-column: 1;
+  }
+
+  .selected-work-section .selected-visual {
+    grid-row: auto;
+    width: 150px;
+    height: 150px;
+    margin-bottom: .35rem;
+  }
+}
