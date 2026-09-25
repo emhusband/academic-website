@@ -1056,3 +1056,44 @@ $reading-measure: 120ch;
     grid-row: auto;
   }
 }
+
+/* --- selected-work v18: thumbnail in the left margin --- */
+/* Keep the citation block on its existing text edge. The illustration is positioned
+   independently in the open margin to the left, so Quarto/Pandoc wrapper placement
+   cannot make the image compete with the citation for the same grid cell. */
+@media (min-width: 701px) {
+  .selected-work-section .selected-item {
+    display: block;
+    position: relative;
+    min-height: 150px;
+  }
+
+  .selected-work-section .selected-visual {
+    position: absolute;
+    left: -182px;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+
+  .selected-work-section .selected-copy {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .selected-work-section .selected-item {
+    display: block;
+    min-height: 0;
+  }
+
+  .selected-work-section .selected-visual {
+    position: static;
+    width: 150px;
+    height: 150px;
+    margin: 0 0 .75rem 0;
+  }
+}
