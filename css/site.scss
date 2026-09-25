@@ -1097,3 +1097,35 @@ $reading-measure: 120ch;
     margin: 0 0 .75rem 0;
   }
 }
+
+/* --- selected-work v19: contained two-column rows --- */
+/* Keep both the thumbnail and citation inside the site's normal content column.
+   The thumbnail begins on the section's left edge; the copy begins after a fixed gap. */
+@media (min-width: 701px) {
+  .selected-work-section .selected-list > .selected-item {
+    display: grid !important;
+    grid-template-columns: 150px minmax(0, 1fr) !important;
+    column-gap: 2rem !important;
+    align-items: start !important;
+    position: static !important;
+    min-height: 150px;
+  }
+
+  .selected-work-section .selected-list > .selected-item > .selected-visual {
+    position: static !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 !important;
+  }
+
+  .selected-work-section .selected-list > .selected-item > .selected-copy {
+    display: block !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+}
