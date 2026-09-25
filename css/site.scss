@@ -995,3 +995,18 @@ $reading-measure: 120ch;
     margin-bottom: .35rem;
   }
 }
+
+/* --- selected-work side-by-side alignment fix --- */
+/* Keep the illustration in the first row only. Text is explicitly placed in the
+   second column so its first line can share that row; subsequent text flows below it. */
+.selected-work-section .selected-visual {
+  grid-row: 1;
+}
+
+.selected-work-section .selected-item > :not(.selected-visual) {
+  grid-column: 2;
+}
+
+.selected-work-section .selected-item > :not(.selected-visual):first-of-type {
+  grid-row: 1;
+}
