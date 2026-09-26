@@ -19,3 +19,8 @@ Teaching is intentionally omitted from the top-level site.
 - The CV navbar item points directly to `files/matthew-husband-cv.pdf`; add the current PDF at that path before deployment.
 - Some publication links can be enriched later with PDFs, DOIs, data, and materials.
 - People and bibliography details should be reviewed once more before the public launch.
+
+### v25 animation fixes
+- Research animations no longer depend on IntersectionObserver state, so scrolling to a programme after page load cannot leave its animation dormant.
+- Expectation distributions now use true slow opacity cross-fades; ambient breathing changes scale only and no longer overrides opacity transitions.
+- Meaning in Memory now contrasts a three-feature triangular trace with a four-feature current bundle.

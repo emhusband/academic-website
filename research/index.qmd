@@ -194,4 +194,5 @@ title: "Research"
 </section>
 
 
-<script src="../js/research-programmes.js"></script>
+<link rel="stylesheet" href="../css/research-programmes-v26.css">
+<script src="../js/research-programmes-v26.js"></script>

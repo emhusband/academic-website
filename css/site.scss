@@ -1374,3 +1374,21 @@ $reading-measure: 120ch;
   .r24-scene,.r24-symbol,.r24-structure,.r24-word,.r24-dist,.r24-alt,.r24-coherence,.r24-bundle,.r24-feature,.r24-memory-node,.r24-retrieve { transition:none!important; animation:none!important; }
   .r24-P,.r24-x,.r24-ex { transform:none!important; }
 }
+
+/* --- v25 research animation fixes --- */
+/* Probability fields must cross-fade continuously. Do not animate opacity in the
+   ambient 'breathing' keyframe: that would override the opacity transition and
+   make each field jump visibly when the class is added. */
+.r24-dist.on {
+  animation: r25-prob-breathe 9s ease-in-out infinite alternate;
+}
+.r24-dist-1.on { animation-duration: 10s; }
+.r24-dist-2.on { animation-duration: 11s; }
+@keyframes r25-prob-breathe {
+  from { transform: scale(.992); }
+  to   { transform: scale(1.008); }
+}
+.r24-dist {
+  transition: opacity 3.4s cubic-bezier(.25,.1,.25,1), transform 4s ease;
+}
+.r24-dist.on { opacity: .94; }
