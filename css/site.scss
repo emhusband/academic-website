@@ -1304,54 +1304,73 @@ $reading-measure: 120ch;
   .pv-stage,.pv-symbol,.pv-word,.pv-dist,.pv-alt,.pv-memory,.pv-retrieve,.pv-coherence { transition:none !important; }
 }
 
-/* --- research programme animation v23: ambient loops --- */
-.pv-cycle { opacity: 0; transition: opacity 2.8s ease; }
-.pv-cycle.pv-cycle-visible { opacity: 1; }
+/* --- research programme animations v24: clean motion system --- */
+/* All v24 animation classes use an isolated prefix so earlier prototype rules cannot
+   alter their timing, transforms, or opacity. */
+.r24-svg { width:100%; height:100%; display:block; overflow:visible; }
+.r24-scene { opacity:0; transition:opacity 2.8s ease; }
+.r24-scene.r24-scene-on { opacity:1; }
+.r24-label,.r24-symbol,.r24-word,.r24-feature { font-family:$serif; fill:$ink; }
+.r24-symbol,.r24-word,.r24-feature { font-style:italic; text-anchor:middle; }
+.r24-symbol { font-size:27px; opacity:0; transition:opacity 2.4s ease,transform 4.2s cubic-bezier(.25,.62,.25,1); transform-box:view-box; transform-origin:center; }
+.r24-symbol.on { opacity:.82; }
+.r24-symbol.r24-distractor.dim { opacity:.07; }
+.r24-relevant { opacity:0; }
+.r24-P { transform:translate(-62px,42px); }
+.r24-x { transform:translate(54px,-34px); }
+.r24-ex { transform:translate(-72px,-44px); }
+.r24-P.placed,.r24-x.placed,.r24-ex.placed { transform:translate(0,0); opacity:1; }
+.r24-distractor { animation:r24-float-a 12s ease-in-out infinite alternate; }
+.r24-float-b { animation-name:r24-float-b; animation-duration:14s; }
+.r24-float-c { animation-name:r24-float-c; animation-duration:13s; }
+.r24-float-d { animation-name:r24-float-d; animation-duration:15s; }
+.r24-float-e { animation-name:r24-float-e; animation-duration:16s; }
+@keyframes r24-float-a { from{transform:translate(-3px,2px) scale(.98)} to{transform:translate(4px,-3px) scale(1.02)} }
+@keyframes r24-float-b { from{transform:translate(2px,-3px)} to{transform:translate(-4px,3px)} }
+@keyframes r24-float-c { from{transform:translate(-2px,-2px)} to{transform:translate(3px,4px)} }
+@keyframes r24-float-d { from{transform:translate(3px,1px)} to{transform:translate(-3px,-4px)} }
+@keyframes r24-float-e { from{transform:translate(-1px,3px)} to{transform:translate(3px,-2px)} }
+.r24-structure { opacity:0; transform:scale(.97); transform-origin:center; transition:opacity 3s ease,transform 3.4s ease; }
+.r24-structure.on { opacity:1; transform:scale(1); }
+.r24-branch { stroke:rgba(103,129,151,.48); stroke-width:1.05; fill:none; }
 
-/* Structure: a richer semantic field is selected by rigid, repeated grammar. */
-.pv-logic { transform: translate(var(--dx,0),var(--dy,0)); transition: opacity 2.4s ease, transform 3.8s cubic-bezier(.25,.62,.25,1); }
-.pv-logic.on { opacity: .78; }
-.pv-logic.placed { transform: translate(0,0); opacity: 1; }
-.pv-logic.soft { opacity: .08; }
-.pv-unused { fill: rgba(16,45,80,.72); font-size: 25px; }
-.pv-op { font-size: 20px; }
-.pv-structure-stage { opacity:0; transform:scale(.985); transform-origin:center; transition:opacity 2.8s ease,transform 3s ease; }
-.pv-structure-stage.on { opacity:1; transform:scale(1); }
-.pv-grammar-line { stroke:rgba(115,139,160,.42); stroke-width:1; }
-.pv-logic.on:not(.placed) { animation: pv-logic-float 9s ease-in-out infinite alternate; }
-@keyframes pv-logic-float { from{translate:-1px 1px} to{translate:2px -2px} }
+.r24-axis { stroke:rgba(174,188,200,.48); stroke-width:.85; }
+.r24-word { font-size:25px; opacity:0; transition:opacity 2.6s ease; }
+.r24-word.on { opacity:1; }
+.r24-dist { opacity:0; transform:scale(.965); transform-origin:center bottom; transition:opacity 2.8s ease,transform 3.2s ease; }
+.r24-dist.on { opacity:1; transform:scale(1); animation:r24-prob-breathe 8s ease-in-out infinite alternate; }
+.r24-dist-1.on { animation-duration:9s; }.r24-dist-2.on { animation-duration:10s; }
+.r24-dist-fill { fill:rgba(121,198,193,.20); }
+.r24-dist-edge { fill:none; stroke:rgba(97,164,163,.27); stroke-width:.72; }
+@keyframes r24-prob-breathe { from{opacity:.84;transform:scale(.99)} to{opacity:1;transform:scale(1.012)} }
 
-/* Expectation: long-lived probability fields. */
-.pv-dist { transition:opacity 2.7s ease,transform 3s ease; }
-.pv-word { transition:opacity 2.5s ease; }
-.pv-dist-fill { fill:rgba(121,198,193,.20); }
-.pv-dist-edge { stroke:rgba(97,164,163,.25); stroke-width:.7; }
+.r24-alt { opacity:0; transform:scale(.55); transform-origin:205px 183px; transition:opacity 3s ease,transform 4s cubic-bezier(.25,.62,.25,1); }
+.r24-alt.on { opacity:1; transform:scale(1); animation:r24-alt-drift 13s ease-in-out infinite alternate; }
+.r24-alt-1.on,.r24-alt-5.on { animation-duration:15s; }.r24-alt-2.on,.r24-alt-7.on { animation-duration:17s; }
+.r24-alt.soft { opacity:.10 !important; transform:scale(.96); }
+.r24-alt-line { stroke:rgba(117,151,177,.52); stroke-width:1.05; fill:none; }
+.r24-node { fill:rgba(117,158,192,.21); stroke:rgba(80,123,158,.27); stroke-width:.8; }
+.r24-teal-node { fill:rgba(73,186,179,.26); stroke:rgba(37,151,147,.3); }
+@keyframes r24-alt-drift { from{translate:-2px 2px} to{translate:3px -3px} }
+.r24-coherence { fill:none; stroke:$teal; stroke-width:1.2; stroke-dasharray:4 5; stroke-dashoffset:150; opacity:0; transition:opacity 2.3s ease,stroke-dashoffset 4s cubic-bezier(.3,.65,.25,1); }
+.r24-coherence.on { opacity:.68; stroke-dashoffset:0; }
 
-/* Alternatives: alternatives emerge together from w1, then settle into a floating field. */
-.pv-radial { transform:translate(var(--from-x),var(--from-y)) scale(.55); transform-origin:center; transition:opacity 2.8s ease,transform 3.6s cubic-bezier(.2,.62,.25,1); }
-.pv-radial.on { transform:translate(0,0) scale(1); }
-.pv-radial.on.pv-drift-0 { animation:pv-alt-float-a 13s ease-in-out 3.8s infinite alternate; }
-.pv-radial.on.pv-drift-1 { animation:pv-alt-float-b 14.5s ease-in-out 3.8s infinite alternate; }
-.pv-radial.on.pv-drift-2 { animation:pv-alt-float-c 15s ease-in-out 3.8s infinite alternate; }
-.pv-radial.on.pv-drift-3 { animation:pv-alt-float-d 13.8s ease-in-out 3.8s infinite alternate; }
-@keyframes pv-alt-float-a { from{translate:-1px 1px} to{translate:3px -2px} }
-@keyframes pv-alt-float-b { from{translate:1px -2px} to{translate:-2px 2px} }
-@keyframes pv-alt-float-c { from{translate:-1px -1px} to{translate:2px 2px} }
-@keyframes pv-alt-float-d { from{translate:2px 1px} to{translate:-2px -2px} }
-.pv-alt.soft { opacity:.08 !important; }
-.pv-coherence { transition:opacity 2.2s ease,stroke-dashoffset 3.2s cubic-bezier(.3,.65,.25,1); }
+.r24-bundle { opacity:0; transform:scale(.97); transform-origin:center; transition:opacity 3s ease,transform 3.3s ease; }
+.r24-bundle.seen { opacity:1; transform:scale(1); }
+.r24-old.decayed { opacity:.40; transition:opacity 4s ease,transform 4s ease; }
+.r24-memory-line { stroke:rgba(111,151,181,.52); stroke-width:1.05; fill:none; }
+.r24-memory-node { fill:rgba(114,169,201,.20); stroke:rgba(80,123,158,.28); stroke-width:.8; }
+.r24-feature { font-size:14px; dominant-baseline:middle; transition:opacity 2.6s ease,fill 2.6s ease; }
+.r24-memory-node { transition:opacity 2.6s ease,fill 2.6s ease,stroke 2.6s ease; }
+.r24-old.decayed .node-0,.r24-old.decayed .feature-0 { opacity:.48; }
+.r24-old.decayed .node-2,.r24-old.decayed .feature-2 { opacity:.34; }
+.r24-old.decayed .node-3,.r24-old.decayed .feature-3 { opacity:.25; }
+.r24-memory-node.react { fill:rgba(73,186,179,.34); stroke:rgba(37,151,147,.52); opacity:1 !important; }
+.r24-feature.react,.r24-feature.resolved { fill:$teal; opacity:1 !important; }
+.r24-retrieve { fill:none; stroke:$teal; stroke-width:1.2; stroke-dasharray:5 6; stroke-dashoffset:420; opacity:0; transition:opacity 2s ease,stroke-dashoffset 4.4s cubic-bezier(.32,.62,.25,1); }
+.r24-retrieve.on { opacity:.65; stroke-dashoffset:0; }
 
-/* Memory: traces remain legible; retrieval selectively reactivates a feature and its label. */
-.pv-memory-old.decayed { opacity:.42; transform:scale(.99); transition:opacity 3.6s ease,transform 3.6s ease; }
-.pv-memory-old.decayed .pv-memory-line { opacity:.55; }
-.pv-memory-old.decayed .pv-memory-node { opacity:.62; }
-.pv-memory-old.decayed .pv-feature { opacity:.58; }
-.pv-memory-node,.pv-feature,.pv-memory-line { transition:opacity 2.5s ease,fill 2.5s ease,stroke 2.5s ease; }
-.pv-feature.react { fill:$teal; opacity:1 !important; }
-.pv-memory-node.react { fill:rgba(73,186,179,.34); stroke:rgba(37,151,147,.48); opacity:1 !important; }
-.pv-retrieve-wipe { transition:opacity 1.8s ease,stroke-dashoffset 4s cubic-bezier(.32,.62,.25,1); }
-
-@media (prefers-reduced-motion: reduce) {
-  .pv-cycle { opacity:1 !important; transition:none !important; }
-  .pv-logic,.pv-structure-stage,.pv-radial { transition:none !important; animation:none !important; }
+@media (prefers-reduced-motion:reduce) {
+  .r24-scene,.r24-symbol,.r24-structure,.r24-word,.r24-dist,.r24-alt,.r24-coherence,.r24-bundle,.r24-feature,.r24-memory-node,.r24-retrieve { transition:none!important; animation:none!important; }
+  .r24-P,.r24-x,.r24-ex { transform:none!important; }
 }

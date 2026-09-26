@@ -2,113 +2,140 @@
   const NS='http://www.w3.org/2000/svg';
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const timers=new Map();
-  const el=(tag,a={})=>{const n=document.createElementNS(NS,tag);Object.entries(a).forEach(([k,v])=>n.setAttribute(k,v));return n};
-  const text=(x,y,t,cls='pv-label')=>{const n=el('text',{x,y,class:cls});n.textContent=t;return n};
-  const line=(x1,y1,x2,y2,cls='pv-line')=>el('line',{x1,y1,x2,y2,class:cls});
-  const circle=(cx,cy,r,cls='pv-node')=>el('circle',{cx,cy,r,class:cls});
-  const group=(cls='')=>el('g',{class:cls});
-  const svg=()=>el('svg',{viewBox:'0 0 520 360',class:'programme-svg pv-cycle',role:'presentation'});
-  const later=(box,fn,ms)=>{const id=setTimeout(fn,ms);if(!timers.has(box))timers.set(box,[]);timers.get(box).push(id)};
+  const visible=new WeakMap();
+  const E=(tag,a={})=>{const n=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(a))n.setAttribute(k,v);return n};
+  const G=(cls='')=>E('g',{class:cls});
+  const T=(x,y,t,cls='r24-label')=>{const n=E('text',{x,y,class:cls});n.textContent=t;return n};
+  const L=(x1,y1,x2,y2,cls='r24-line')=>E('line',{x1,y1,x2,y2,class:cls});
+  const C=(cx,cy,r,cls='r24-node')=>E('circle',{cx,cy,r,class:cls});
+  const S=()=>E('svg',{viewBox:'0 0 520 360',class:'r24-svg',role:'presentation'});
+  const later=(box,fn,ms)=>{const id=setTimeout(()=>{if(visible.get(box)!==false)fn()},ms);(timers.get(box)||timers.set(box,[]).get(box)).push(id)};
   const clear=(box)=>{(timers.get(box)||[]).forEach(clearTimeout);timers.set(box,[])};
-  const begin=(s)=>requestAnimationFrame(()=>s.classList.add('pv-cycle-visible'));
-  const dissolve=(s)=>s.classList.remove('pv-cycle-visible');
+  const fadeScene=(scene,on)=>scene.classList.toggle('r24-scene-on',on);
 
   function grammar(box){
-    const s=svg();
-    // Two rigid, identical Vs. A richer field of semantic material floats before structure selects from it.
-    const upper=group('pv-structure-stage pv-upper');
-    upper.append(line(280,112,230,157,'pv-grammar-line'),line(280,112,330,157,'pv-grammar-line'));
-    const lower=group('pv-structure-stage pv-lower');
-    lower.append(line(330,157,280,202,'pv-grammar-line'),line(330,157,380,202,'pv-grammar-line'));
+    const s=S(), scene=G('r24-scene'); s.append(scene); box.append(s);
+    // Two identical rigid Vs. The lower constituent's apex is the right terminal of the upper V.
+    const lower=G('r24-structure r24-lower');
+    lower.append(L(330,176,285,216,'r24-branch'),L(330,176,375,216,'r24-branch'));
+    const upper=G('r24-structure r24-upper');
+    upper.append(L(285,116,240,156,'r24-branch'),L(285,116,330,156,'r24-branch'));
+    scene.append(lower,upper);
 
-    const symbols=[
-      ['P',280,202,-58,38,'pv-P'],['x',380,202,52,31,'pv-x'],['∃',230,157,-46,-28,'pv-ex pv-teal'],
-      ['∀',116,100,0,0,'pv-unused'],['e',425,92,0,0,'pv-unused'],['s',92,246,0,0,'pv-unused'],
-      ['Q',436,264,0,0,'pv-unused'],['Op',340,64,0,0,'pv-unused pv-op']
-    ].map(([t,x,y,dx,dy,cls])=>{const n=text(x,y,t,`pv-symbol pv-logic ${cls}`);n.style.setProperty('--dx',`${dx}px`);n.style.setProperty('--dy',`${dy}px`);s.append(n);return n});
-    const [P,x,ex,...unused]=symbols;
-    s.append(upper,lower); box.append(s);
-    const reset=()=>{symbols.forEach(n=>n.classList.remove('on','placed','soft'));upper.classList.remove('on');lower.classList.remove('on')};
-    const cycle=()=>{clear(box);dissolve(s);reset();
-      later(box,()=>{begin(s);symbols.forEach(n=>n.classList.add('on'))},900);
-      later(box,()=>{lower.classList.add('on');P.classList.add('placed');x.classList.add('placed')},4300);
-      later(box,()=>unused.forEach(n=>n.classList.add('soft')),6500);
-      later(box,()=>{upper.classList.add('on');ex.classList.add('placed')},7900);
-      later(box,()=>dissolve(s),13900);
-      later(box,cycle,17100);
+    // Relevant semantic material starts visibly displaced from its terminals.
+    const P=T(285,223,'P','r24-symbol r24-relevant r24-P');
+    const x=T(375,223,'x','r24-symbol r24-relevant r24-x');
+    const ex=T(240,163,'∃','r24-symbol r24-relevant r24-ex');
+    // Distractors make the field genuinely underdetermined before structure asserts itself.
+    const distractors=[
+      T(118,102,'∀','r24-symbol r24-distractor r24-float-a'),
+      T(430,88,'e','r24-symbol r24-distractor r24-float-b'),
+      T(104,260,'s','r24-symbol r24-distractor r24-float-c'),
+      T(438,265,'Q','r24-symbol r24-distractor r24-float-d'),
+      T(340,70,'Op','r24-symbol r24-distractor r24-float-e')
+    ];
+    scene.append(...distractors,P,x,ex);
+    const allSymbols=[...distractors,P,x,ex];
+
+    const reset=()=>{
+      fadeScene(scene,false); lower.classList.remove('on'); upper.classList.remove('on');
+      allSymbols.forEach(n=>n.classList.remove('on','placed','dim'));
     };
-    if(reduced){begin(s);symbols.forEach(n=>n.classList.add('on'));P.classList.add('placed');x.classList.add('placed');ex.classList.add('placed');unused.forEach(n=>n.classList.add('soft'));upper.classList.add('on');lower.classList.add('on')} else cycle();
+    const cycle=()=>{
+      clear(box); reset();
+      later(box,()=>{fadeScene(scene,true);allSymbols.forEach(n=>n.classList.add('on'))},350);
+      // Lower structure asserts itself; P/x are pulled slowly inward while irrelevant material begins to recede.
+      later(box,()=>{lower.classList.add('on');P.classList.add('placed');x.classList.add('placed');distractors[0].classList.add('dim');distractors[2].classList.add('dim')},3900);
+      later(box,()=>{upper.classList.add('on');ex.classList.add('placed');distractors.forEach(n=>n.classList.add('dim'))},8200);
+      // Hold the completed composition.
+      later(box,()=>fadeScene(scene,false),14500);
+      later(box,cycle,17800);
+    };
+    if(reduced){fadeScene(scene,true);allSymbols.forEach(n=>n.classList.add('on'));distractors.forEach(n=>n.classList.add('dim'));lower.classList.add('on');upper.classList.add('on');P.classList.add('placed');x.classList.add('placed');ex.classList.add('placed')} else cycle();
   }
 
   function expectation(box){
-    const s=svg(); s.append(line(45,250,475,250,'pv-axis'));
-    const words=[text(80,242,'w₁','pv-word on'),text(205,242,'w₂','pv-word'),text(330,242,'w₃','pv-word'),text(455,242,'w₄','pv-word')]; words.forEach(n=>s.append(n));
+    const s=S(),scene=G('r24-scene');s.append(scene);box.append(s);
+    scene.append(L(48,250,472,250,'r24-axis'));
+    const words=[T(76,242,'w₁','r24-word on'),T(200,242,'w₂','r24-word'),T(324,242,'w₃','r24-word'),T(448,242,'w₄','r24-word')];scene.append(...words);
     const paths=[
-      'M128 250 C140 250 148 245 156 230 C164 213 170 181 176 151 C182 181 188 213 196 230 C204 245 212 250 224 250 Z',
-      'M252 250 C262 250 269 245 274 228 C280 205 284 166 289 143 C293 170 300 197 311 216 C323 237 339 247 355 250 Z',
-      'M376 250 C386 250 393 245 399 229 C405 211 411 184 418 170 C424 188 431 216 440 226 C447 216 454 190 462 179 C469 194 476 223 484 237 C490 246 496 250 503 250 Z'];
-    const ds=paths.map((d,i)=>{const g=group(`pv-dist pv-breathe pv-breathe-${i}`);g.append(el('path',{d,class:'pv-dist-fill'}),el('path',{d:d.replace(/ Z$/,''),class:'pv-dist-edge'}));s.append(g);return g}); box.append(s);
-    const reset=()=>{words.slice(1).forEach(w=>w.classList.remove('on'));ds.forEach(d=>d.classList.remove('on'))};
-    const cycle=()=>{clear(box);dissolve(s);reset();
-      later(box,()=>{begin(s);ds[0].classList.add('on')},900);
-      later(box,()=>{ds[0].classList.remove('on');words[1].classList.add('on')},5600);
-      later(box,()=>ds[1].classList.add('on'),7600);
-      later(box,()=>{ds[1].classList.remove('on');words[2].classList.add('on')},12300);
-      later(box,()=>ds[2].classList.add('on'),14300);
-      later(box,()=>{ds[2].classList.remove('on');words[3].classList.add('on')},19000);
-      later(box,()=>dissolve(s),22300);
-      later(box,cycle,25600);
+      'M126 250 C139 250 148 245 156 229 C164 211 170 178 176 148 C182 178 188 211 196 229 C204 245 213 250 226 250 Z',
+      'M250 250 C260 250 267 245 273 227 C279 203 283 163 288 140 C293 170 300 198 311 217 C323 238 340 248 358 250 Z',
+      'M374 250 C384 250 391 245 397 228 C403 209 409 181 416 167 C423 186 430 215 439 225 C446 214 453 187 461 176 C468 192 475 222 484 236 C490 246 497 250 505 250 Z'];
+    const ds=paths.map((d,i)=>{const g=G(`r24-dist r24-dist-${i}`);g.append(E('path',{d,class:'r24-dist-fill'}),E('path',{d:d.replace(/ Z$/,''),class:'r24-dist-edge'}));scene.append(g);return g});
+    const reset=()=>{fadeScene(scene,false);words.slice(1).forEach(w=>w.classList.remove('on'));ds.forEach(d=>d.classList.remove('on'))};
+    const cycle=()=>{
+      clear(box);reset();
+      later(box,()=>{fadeScene(scene,true);ds[0].classList.add('on')},500);
+      // Long emergence, dwell, and cross-fade: no distribution pops.
+      later(box,()=>{ds[0].classList.remove('on');words[1].classList.add('on')},6100);
+      later(box,()=>ds[1].classList.add('on'),8200);
+      later(box,()=>{ds[1].classList.remove('on');words[2].classList.add('on')},13700);
+      later(box,()=>ds[2].classList.add('on'),15800);
+      later(box,()=>{ds[2].classList.remove('on');words[3].classList.add('on')},21300);
+      later(box,()=>fadeScene(scene,false),24300);
+      later(box,cycle,27800);
     };
-    if(reduced){begin(s);words.forEach(w=>w.classList.add('on'));ds[2].classList.add('on')} else cycle();
+    if(reduced){fadeScene(scene,true);words.forEach(w=>w.classList.add('on'));ds[2].classList.add('on')} else cycle();
   }
 
   function alternatives(box){
-    const s=svg(), w1=text(205,190,'w₁','pv-word on'), w2=text(405,190,'w₂','pv-word'); s.append(w1,w2);
-    const pts=[[120,80,18],[205,65,12],[292,105,22],[105,190,10],[285,190,13],[135,285,21],[225,300,11],[310,265,17]];
-    const alts=pts.map(([x,y,r],i)=>{const g=group(`pv-alt pv-radial pv-drift-${i%4}`);g.style.setProperty('--from-x',`${205-x}px`);g.style.setProperty('--from-y',`${190-y}px`);g.append(line(205,185,x,y,'pv-solid-soft'),circle(x,y,r,i%3===0?'pv-node pv-teal-node':'pv-node'));s.insertBefore(g,w1);return g});
-    const links=[[292,105],[285,190],[310,265]].map(([x,y],i)=>{const l=line(405,185,x,y,'pv-coherence pv-grow');l.style.setProperty('--delay',`${i*240}ms`);s.append(l);return l}); box.append(s);
-    const reset=()=>{alts.forEach(a=>a.classList.remove('on','soft'));links.forEach(l=>l.classList.remove('on'));w2.classList.remove('on')};
-    const cycle=()=>{clear(box);dissolve(s);reset();
-      later(box,()=>begin(s),900);
-      later(box,()=>alts.forEach(a=>a.classList.add('on')),1900);
+    const s=S(),scene=G('r24-scene');s.append(scene);box.append(s);
+    const w1=T(205,188,'w₁','r24-word on'),w2=T(405,188,'w₂','r24-word');scene.append(w1,w2);
+    const pts=[[112,84,17],[205,66,12],[298,102,22],[105,188,10],[292,188,14],[132,282,20],[225,298,11],[310,266,17]];
+    const alts=pts.map(([x,y,r],i)=>{const g=G(`r24-alt r24-alt-${i}`);g.append(L(205,183,x,y,'r24-alt-line'),C(x,y,r,i%3===0?'r24-node r24-teal-node':'r24-node'));scene.insertBefore(g,w1);return g});
+    const links=[[298,102],[292,188],[310,266]].map(([x,y])=>{const p=E('path',{d:`M405 183 C360 170 ${x+20} ${y-8} ${x} ${y}`,class:'r24-coherence'});scene.append(p);return p});
+    const reset=()=>{fadeScene(scene,false);alts.forEach(a=>a.classList.remove('on','soft'));w2.classList.remove('on');links.forEach(l=>l.classList.remove('on'))};
+    const cycle=()=>{
+      clear(box);reset();
+      later(box,()=>fadeScene(scene,true),400);
+      // Alternatives emerge as one radial field rather than as a list.
+      later(box,()=>alts.forEach(a=>a.classList.add('on')),1700);
       later(box,()=>{alts[1].classList.add('soft');alts[3].classList.add('soft');alts[6].classList.add('soft')},7200);
-      later(box,()=>w2.classList.add('on'),9300);
-      later(box,()=>links.forEach(l=>l.classList.add('on')),11700);
-      later(box,()=>{alts[5].classList.add('soft');alts[7].classList.add('soft')},14900);
-      later(box,()=>dissolve(s),18100);
-      later(box,cycle,21400);
+      later(box,()=>w2.classList.add('on'),9600);
+      later(box,()=>links.forEach(l=>l.classList.add('on')),12100);
+      later(box,()=>{alts[5].classList.add('soft');alts[0].classList.add('soft')},15700);
+      later(box,()=>fadeScene(scene,false),19000);
+      later(box,cycle,22500);
     };
-    if(reduced){begin(s);alts.forEach(a=>a.classList.add('on'));w2.classList.add('on');links.forEach(l=>l.classList.add('on'))} else cycle();
+    if(reduced){fadeScene(scene,true);alts.forEach(a=>a.classList.add('on'));w2.classList.add('on');links.forEach(l=>l.classList.add('on'))} else cycle();
   }
 
   function memory(box){
-    const s=svg();
+    const s=S(),scene=G('r24-scene');s.append(scene);box.append(s);
     function bundle(cx,cy,labels,cls){
-      const g=group(cls), pts=[[-38,-30],[38,-30],[-38,30],[38,30]];
-      g.append(line(cx-38,cy-30,cx+38,cy-30,'pv-memory-line'),line(cx-38,cy+30,cx+38,cy+30,'pv-memory-line'),line(cx-38,cy-30,cx-38,cy+30,'pv-memory-line'),line(cx+38,cy-30,cx+38,cy+30,'pv-memory-line'),line(cx-38,cy-30,cx+38,cy+30,'pv-memory-line'));
-      pts.forEach(([dx,dy],i)=>{g.append(circle(cx+dx,cy+dy,15,'pv-memory-node'));g.append(text(cx+dx,cy+dy+5,labels[i],'pv-feature'))});
+      const g=G(`r24-bundle ${cls}`), pts=[[cx-34,cy-30],[cx+34,cy-30],[cx-34,cy+30],[cx+34,cy+30]];
+      g.append(L(pts[0][0],pts[0][1],pts[1][0],pts[1][1],'r24-memory-line'),L(pts[0][0],pts[0][1],pts[2][0],pts[2][1],'r24-memory-line'),L(pts[1][0],pts[1][1],pts[3][0],pts[3][1],'r24-memory-line'),L(pts[2][0],pts[2][1],pts[3][0],pts[3][1],'r24-memory-line'));
+      pts.forEach(([x,y],i)=>{g.append(C(x,y,15,`r24-memory-node node-${i}`),T(x,y+5,labels[i],`r24-feature feature-${i}`))});
       return g;
     }
-    const old=bundle(145,190,['f₁','f₂','f₃','f₄'],'pv-memory pv-memory-old');
-    const cur=bundle(390,190,['f₅','f₆','f₇','f_'],'pv-memory pv-memory-current');
-    s.append(old,cur);
-    const retrieve=el('path',{d:'M 428 220 C 350 278, 270 276, 183 160',class:'pv-retrieve pv-retrieve-wipe'}); s.append(retrieve); box.append(s);
-    const oldFeatures=old.querySelectorAll('.pv-feature'), oldNodes=old.querySelectorAll('.pv-memory-node'), target=cur.querySelectorAll('.pv-feature')[3];
-    const source=oldFeatures[1], sourceNode=oldNodes[1];
-    const reset=()=>{old.classList.remove('seen','decayed');cur.classList.remove('seen');retrieve.classList.remove('on');source.classList.remove('react');sourceNode.classList.remove('react');target.textContent='f_';target.classList.remove('resolved')};
-    const cycle=()=>{clear(box);dissolve(s);reset();
-      later(box,()=>{begin(s);old.classList.add('seen')},900);
-      later(box,()=>old.classList.add('decayed'),6000);
-      later(box,()=>cur.classList.add('seen'),8200);
-      later(box,()=>retrieve.classList.add('on'),11600);
-      later(box,()=>{source.classList.add('react');sourceNode.classList.add('react')},14500);
-      later(box,()=>{target.textContent='f₂';target.classList.add('resolved')},16600);
-      later(box,()=>dissolve(s),19800);
-      later(box,cycle,23100);
+    const old=bundle(145,185,['f₁','f₂','f₃','f₄'],'r24-old');
+    const cur=bundle(390,185,['f₅','f₆','f₇','f_'],'r24-current');
+    scene.append(old,cur);
+    // Current bottom-right feature retrieves old top-right f2.
+    const retrieve=E('path',{d:'M424 215 C355 285 270 275 179 155',class:'r24-retrieve'});scene.append(retrieve);
+    const sourceNode=old.querySelector('.node-1'),sourceLabel=old.querySelector('.feature-1'),target=cur.querySelector('.feature-3');
+    const reset=()=>{fadeScene(scene,false);old.classList.remove('seen','decayed');cur.classList.remove('seen');retrieve.classList.remove('on');sourceNode.classList.remove('react');sourceLabel.classList.remove('react');target.classList.remove('resolved');target.textContent='f_'};
+    const cycle=()=>{
+      clear(box);reset();
+      later(box,()=>fadeScene(scene,true),400);
+      later(box,()=>old.classList.add('seen'),1000);
+      later(box,()=>old.classList.add('decayed'),6500);
+      later(box,()=>cur.classList.add('seen'),9000);
+      later(box,()=>retrieve.classList.add('on'),12500);
+      later(box,()=>{sourceNode.classList.add('react');sourceLabel.classList.add('react')},15700);
+      later(box,()=>{target.textContent='f₂';target.classList.add('resolved')},18000);
+      later(box,()=>fadeScene(scene,false),21500);
+      later(box,cycle,25000);
     };
-    if(reduced){begin(s);old.classList.add('seen','decayed');cur.classList.add('seen');retrieve.classList.add('on');source.classList.add('react');sourceNode.classList.add('react');target.textContent='f₂';target.classList.add('resolved')} else cycle();
+    if(reduced){fadeScene(scene,true);old.classList.add('seen','decayed');cur.classList.add('seen');retrieve.classList.add('on');sourceNode.classList.add('react');sourceLabel.classList.add('react');target.textContent='f₂';target.classList.add('resolved')} else cycle();
   }
 
   const makers={'grammatical-structure':grammar,'expectation-inference':expectation,'alternatives-coherence':alternatives,'meaning-memory':memory};
-  document.querySelectorAll('.programme-visual').forEach(box=>makers[box.dataset.visual]?.(box));
+  const boxes=[...document.querySelectorAll('.programme-visual')];
+  boxes.forEach(box=>{visible.set(box,true);makers[box.dataset.visual]?.(box)});
+  if('IntersectionObserver' in window && !reduced){
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>visible.set(e.target,e.isIntersecting)),{rootMargin:'150px'});
+    boxes.forEach(b=>io.observe(b));
+  }
 })();
