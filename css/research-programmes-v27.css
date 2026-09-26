@@ -1,0 +1,25 @@
+/* v26 isolated research-programme animation styles. Versioned asset avoids stale browser cache. */
+.r27-svg{width:100%;height:100%;display:block;overflow:visible}
+.r27-scene{opacity:0;transition:opacity 2.8s ease}.r27-scene.r27-scene-on{opacity:1}
+.r27-label,.r27-symbol,.r27-word,.r27-feature{font-family:Georgia,'Times New Roman',serif;fill:#102d50}
+.r27-symbol,.r27-word,.r27-feature{font-style:italic;text-anchor:middle}
+.r27-symbol{font-size:27px;opacity:0;transition:opacity 2.4s ease,transform 4.2s cubic-bezier(.25,.62,.25,1);transform-box:view-box;transform-origin:center}.r27-symbol.on{opacity:.82}.r27-symbol.r27-distractor.dim{opacity:.07}
+.r27-P{transform:translate(-62px,42px)}.r27-x{transform:translate(54px,-34px)}.r27-ex{transform:translate(-72px,-44px)}.r27-P.placed,.r27-x.placed,.r27-ex.placed{transform:translate(0,0);opacity:1}
+.r27-distractor{animation:r27-float 14s ease-in-out infinite alternate}@keyframes r27-float{from{transform:translate(-3px,2px) scale(.985)}to{transform:translate(4px,-3px) scale(1.015)}}
+.r27-structure{opacity:0;transform:scale(.97);transform-origin:center;transition:opacity 3s ease,transform 3.4s ease}.r27-structure.on{opacity:1;transform:scale(1)}.r27-branch{stroke:rgba(103,129,151,.48);stroke-width:1.05;fill:none}
+.r27-axis{stroke:rgba(174,188,200,.48);stroke-width:.85}.r27-word{font-size:25px;opacity:0;transition:opacity 3.2s ease}.r27-word.on{opacity:1}
+/* Expectation: opacity is controlled only here, never by keyframes. */
+.r27-dist{opacity:0;transform:scale(.985);transform-origin:center bottom;transition:opacity 4.2s cubic-bezier(.22,.61,.36,1),transform 5s ease}.r27-dist.on{opacity:.94;transform:scale(1);animation:r27-prob-breathe 10s ease-in-out infinite alternate}@keyframes r27-prob-breathe{from{transform:scale(.995)}to{transform:scale(1.006)}}
+.r27-dist-fill{fill:rgba(121,198,193,.20)}.r27-dist-edge{fill:none;stroke:rgba(97,164,163,.27);stroke-width:.72}
+.r27-alt{opacity:0;transform:scale(.55);transform-origin:205px 183px;transition:opacity 3s ease,transform 4s cubic-bezier(.25,.62,.25,1)}.r27-alt.on{opacity:1;transform:scale(1);animation:r27-alt-drift 14s ease-in-out infinite alternate}.r27-alt.soft{opacity:.10!important;transform:scale(.96)}@keyframes r27-alt-drift{from{translate:-2px 2px}to{translate:3px -3px}}
+.r27-alt-line{stroke:rgba(117,151,177,.52);stroke-width:1.05;fill:none}.r27-node{fill:rgba(117,158,192,.21);stroke:rgba(80,123,158,.27);stroke-width:.8}.r27-teal-node{fill:rgba(73,186,179,.26);stroke:rgba(37,151,147,.3)}
+.r27-coherence{fill:none;stroke:#159b98;stroke-width:1.2;stroke-dasharray:4 5;stroke-dashoffset:150;opacity:0;transition:opacity 2.3s ease,stroke-dashoffset 4s cubic-bezier(.3,.65,.25,1)}.r27-coherence.on{opacity:.68;stroke-dashoffset:0}
+.r27-bundle{opacity:0;transform:scale(.97);transform-origin:center;transition:opacity 3s ease,transform 3.3s ease}.r27-bundle.seen{opacity:1;transform:scale(1)}.r27-old.decayed{opacity:.42;transition:opacity 4s ease,transform 4s ease}
+.r27-memory-line{stroke:rgba(111,151,181,.52);stroke-width:1.05;fill:none}.r27-memory-node{fill:rgba(114,169,201,.20);stroke:rgba(80,123,158,.28);stroke-width:.8;transition:opacity 2.6s ease,fill 2.6s ease,stroke 2.6s ease}.r27-feature{font-size:14px;dominant-baseline:middle;transition:opacity 2.6s ease,fill 2.6s ease}.r27-old.decayed .node-0,.r27-old.decayed .feature-0{opacity:.52}.r27-old.decayed .node-2,.r27-old.decayed .feature-2{opacity:.38}
+.r27-memory-node.react{fill:rgba(73,186,179,.34);stroke:rgba(37,151,147,.52);opacity:1!important}.r27-feature.react,.r27-feature.resolved{fill:#159b98;opacity:1!important}.r27-retrieve{fill:none;stroke:#159b98;stroke-width:1.2;stroke-dasharray:5 6;stroke-dashoffset:420;opacity:0;transition:opacity 2s ease,stroke-dashoffset 4.4s cubic-bezier(.32,.62,.25,1)}.r27-retrieve.on{opacity:.65;stroke-dashoffset:0}
+@media(prefers-reduced-motion:reduce){.r27-scene,.r27-symbol,.r27-structure,.r27-word,.r27-dist,.r27-alt,.r27-coherence,.r27-bundle,.r27-feature,.r27-memory-node,.r27-retrieve{transition:none!important;animation:none!important}.r27-P,.r27-x,.r27-ex{transform:none!important}}
+
+/* v27 memory retrieval: selective reactivation includes the retrieved feature and its local relations. */
+.r27-old .r27-memory-line{transition:stroke 2s ease,opacity 2s ease}
+.r27-old.retrieving .r27-memory-line:nth-of-type(1),
+.r27-old.retrieving .r27-memory-line:nth-of-type(3){stroke:rgba(37,151,147,.46);opacity:.9}
