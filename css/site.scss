@@ -1303,3 +1303,55 @@ $reading-measure: 120ch;
   .pv-symbol.on,.pv-dist.on,.pv-alt.on,.pv-memory.seen { animation:none !important; }
   .pv-stage,.pv-symbol,.pv-word,.pv-dist,.pv-alt,.pv-memory,.pv-retrieve,.pv-coherence { transition:none !important; }
 }
+
+/* --- research programme animation v23: ambient loops --- */
+.pv-cycle { opacity: 0; transition: opacity 2.8s ease; }
+.pv-cycle.pv-cycle-visible { opacity: 1; }
+
+/* Structure: a richer semantic field is selected by rigid, repeated grammar. */
+.pv-logic { transform: translate(var(--dx,0),var(--dy,0)); transition: opacity 2.4s ease, transform 3.8s cubic-bezier(.25,.62,.25,1); }
+.pv-logic.on { opacity: .78; }
+.pv-logic.placed { transform: translate(0,0); opacity: 1; }
+.pv-logic.soft { opacity: .08; }
+.pv-unused { fill: rgba(16,45,80,.72); font-size: 25px; }
+.pv-op { font-size: 20px; }
+.pv-structure-stage { opacity:0; transform:scale(.985); transform-origin:center; transition:opacity 2.8s ease,transform 3s ease; }
+.pv-structure-stage.on { opacity:1; transform:scale(1); }
+.pv-grammar-line { stroke:rgba(115,139,160,.42); stroke-width:1; }
+.pv-logic.on:not(.placed) { animation: pv-logic-float 9s ease-in-out infinite alternate; }
+@keyframes pv-logic-float { from{translate:-1px 1px} to{translate:2px -2px} }
+
+/* Expectation: long-lived probability fields. */
+.pv-dist { transition:opacity 2.7s ease,transform 3s ease; }
+.pv-word { transition:opacity 2.5s ease; }
+.pv-dist-fill { fill:rgba(121,198,193,.20); }
+.pv-dist-edge { stroke:rgba(97,164,163,.25); stroke-width:.7; }
+
+/* Alternatives: alternatives emerge together from w1, then settle into a floating field. */
+.pv-radial { transform:translate(var(--from-x),var(--from-y)) scale(.55); transform-origin:center; transition:opacity 2.8s ease,transform 3.6s cubic-bezier(.2,.62,.25,1); }
+.pv-radial.on { transform:translate(0,0) scale(1); }
+.pv-radial.on.pv-drift-0 { animation:pv-alt-float-a 13s ease-in-out 3.8s infinite alternate; }
+.pv-radial.on.pv-drift-1 { animation:pv-alt-float-b 14.5s ease-in-out 3.8s infinite alternate; }
+.pv-radial.on.pv-drift-2 { animation:pv-alt-float-c 15s ease-in-out 3.8s infinite alternate; }
+.pv-radial.on.pv-drift-3 { animation:pv-alt-float-d 13.8s ease-in-out 3.8s infinite alternate; }
+@keyframes pv-alt-float-a { from{translate:-1px 1px} to{translate:3px -2px} }
+@keyframes pv-alt-float-b { from{translate:1px -2px} to{translate:-2px 2px} }
+@keyframes pv-alt-float-c { from{translate:-1px -1px} to{translate:2px 2px} }
+@keyframes pv-alt-float-d { from{translate:2px 1px} to{translate:-2px -2px} }
+.pv-alt.soft { opacity:.08 !important; }
+.pv-coherence { transition:opacity 2.2s ease,stroke-dashoffset 3.2s cubic-bezier(.3,.65,.25,1); }
+
+/* Memory: traces remain legible; retrieval selectively reactivates a feature and its label. */
+.pv-memory-old.decayed { opacity:.42; transform:scale(.99); transition:opacity 3.6s ease,transform 3.6s ease; }
+.pv-memory-old.decayed .pv-memory-line { opacity:.55; }
+.pv-memory-old.decayed .pv-memory-node { opacity:.62; }
+.pv-memory-old.decayed .pv-feature { opacity:.58; }
+.pv-memory-node,.pv-feature,.pv-memory-line { transition:opacity 2.5s ease,fill 2.5s ease,stroke 2.5s ease; }
+.pv-feature.react { fill:$teal; opacity:1 !important; }
+.pv-memory-node.react { fill:rgba(73,186,179,.34); stroke:rgba(37,151,147,.48); opacity:1 !important; }
+.pv-retrieve-wipe { transition:opacity 1.8s ease,stroke-dashoffset 4s cubic-bezier(.32,.62,.25,1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-cycle { opacity:1 !important; transition:none !important; }
+  .pv-logic,.pv-structure-stage,.pv-radial { transition:none !important; animation:none !important; }
+}
